@@ -46,6 +46,7 @@ test(); // Kritu._. & jainam 22 (output)
 
 
 
+
 // Let & Const(Block Scope)
 
 function both() {
