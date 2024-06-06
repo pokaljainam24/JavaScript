@@ -61,4 +61,37 @@ both(); // 10 & 5 (output)
 
 
 
+//Hoisting
+
+resetScore();              //
+drawGameBoard();          //
+                         // Declaration         
+populateGameBoard();    //
+startGame();           //
+
+function resetScore() {
+	console.log("Resetting score");  //assing
+}
+
+function drawGameBoard() {
+	console.log("Drawing board");   //assing
+}
+
+function populateGameBoard() {
+	console.log("Populating board");  //assing
+}
+
+function startGame() {
+	console.log("Starting game"); //assing
+}
+if (true) {
+    name = "EndGame";
+    name = "Start";
+    console.log(name);
+}
+
+
+
+
+
 
