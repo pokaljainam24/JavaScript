@@ -90,7 +90,8 @@ if (true) {
     console.log(name);
 }
 
-
+console.log(Name);
+let Name = "jainam";
 
 
 
