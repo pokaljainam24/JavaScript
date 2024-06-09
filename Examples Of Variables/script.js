@@ -50,10 +50,34 @@
 
 
 //---------------Task 5: Variable Scope in Global Context
+
 // console.log(a); // undefine
 // var a = 1;
-// // console.log(a); // value assing
+// console.log(a); // value assing
 // {
 //     var a = 2;
 // }      
 // console.log(a); // value assing overlap
+
+//----------------Task 6: Predict the output of the following expressions.
+
+// console.log(result1); //ReferenceError: Cannot access 'result1' before initialization
+// let result1 = 10 + 5 * 2;
+// let result2 = (10 + 5) * 2;
+// let result3 = 10 / 2 * 5;
+// let result4 = 10 * (2 + 5) - 3;
+
+
+// console.log(result1); //ans - 20, explanation - * has a greater precedence than + 
+// console.log(result2); //ans - 30, explanation - () has a greater precedence than *
+// console.log(result3); //ans - 25, explanation - / has a greater precedence than *
+// console.log(result4); //ans - 67, explanation - (), *, - is order of operator precedence
+
+//----------------Task 7: Comparison Operators
+
+// console.log(5 == '5'); //true // equality operator converts '5' to 5, in technical terms such process is called coercion
+// console.log(5 === '5'); //false // Strict equality operator does not convert '5' to 5
+// console.log(null == undefined); //true // equality operator converts both null and undefined as equal
+// console.log(null === undefined); //false // Strict equality operator does not convert null and undefined as same
+// console.log(NaN == NaN); //false // nan is not equal to anything, not even itself. it is not possible to convert the two values as equal
+// console.log(NaN === NaN); //false // NaN is not equal to anything
