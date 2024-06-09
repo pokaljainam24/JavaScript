@@ -59,7 +59,7 @@
 // }      
 // console.log(a); // value assing overlap
 
-//----------------Task 6: Predict the output of the following expressions.
+//----------------Task 6: Operator Precedence
 
 // console.log(result1); //ReferenceError: Cannot access 'result1' before initialization
 // let result1 = 10 + 5 * 2;
@@ -81,3 +81,4 @@
 // console.log(null === undefined); //false // Strict equality operator does not convert null and undefined as same
 // console.log(NaN == NaN); //false // nan is not equal to anything, not even itself. it is not possible to convert the two values as equal
 // console.log(NaN === NaN); //false // NaN is not equal to anything
+
