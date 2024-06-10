@@ -26,7 +26,7 @@
 // console.log(y); // cannot acceess the outside function throw the ReferenceError: y is not defined
 // console.log(z); // cannot acceess the outside function throw the ReferenceError: z is not defined
 
-
+     
 //---------------Task 3: Redeclaring Variables
 
 // console.log(a) // undefine
