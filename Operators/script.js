@@ -54,9 +54,7 @@
 
 //TOPIC//----BMI = mass / height ** 2 = mass / (height * height) (mass in kg and height in meter).
 
-//----1. Print a nice output to the console, telling the user who has the higher BMI. The message can be either:
-
-
+// //----1. Print a nice output to the console, telling the user who has the higher BMI. The message can be either:
 
 // const massMark = 78;
 // const heightMark = 1.69;
@@ -67,14 +65,15 @@
 // const BMIJohn = massJohn / (heightJohn * heightJohn); //24.194608809993426
 // console.log(BMIMark, BMIJohn);
 
-//----2. Modify the outputs above to use template literals to include the BMI values in the outputs.
+// //----2. Modify the outputs above to use template literals to include the BMI values in the outputs.
 
 // if(BMIMark>BMIJohn){
-//     console.log(`Mark's BMI --> ${BMIMark} is Higher than John's BMI-->${BMIJohn}.`);
+//     console.log(`Mark's BMI --> ${BMIMark} is Higher than John's BMI-->${Math.floor(BMIJohn)}.`);
 // }
 // else 
 // {
-//     console.log(`John's BMI -->${BMIJohn} is Higher than Mark's BMI ${BMIMark}`);
+//     console.log(`John's BMI -->${Math.floor(BMIJohn)} is Higher than Mark's BMI ${BMIMark}`);
 // }
 
 //-----ANS: Mark's BMI --> 27.309968138370508 is Higher than John's BMI-->24.194608809993426.
+
