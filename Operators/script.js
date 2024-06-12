@@ -11,52 +11,52 @@
 
 // 1.Arithmetic Operators
 
-        // +  --> Addition
-        // -  --> Subtraction
-        // *  --> Multiplication
-        // ** --> Exponentiation (ES2016)
-        // /  --> Division
-        // %  --> Modulus (Division Remainder)
-        // ++ --> Increment
-        // -- --> Decrement
+// +  --> Addition
+// -  --> Subtraction
+// *  --> Multiplication
+// ** --> Exponentiation (ES2016)
+// /  --> Division
+// %  --> Modulus (Division Remainder)
+// ++ --> Increment
+// -- --> Decrement
 
 // 2.Assignment Operators
 
-        // =	--> x = y	x = y
-        // +=	--> x += y	x = x + y
-        // -=	--> x -= y	x = x - y
-        // *=	--> x *= y	x = x * y
-        // /=	--> x /= y	x = x / y
-        // %=	--> x %= y	x = x % y
-        // **=	--> x **= y	x = x ** y
+// =	--> x = y	x = y
+// +=	--> x += y	x = x + y
+// -=	--> x -= y	x = x - y
+// *=	--> x *= y	x = x * y
+// /=	--> x /= y	x = x / y
+// %=	--> x %= y	x = x % y
+// **=	--> x **= y	x = x ** y
 
 // 3.Comparison Operators
 
-        // ==	--> equal to
-        // ===	--> equal value and equal type
-        // !=	--> not equal
-        // !==	--> not equal value or not equal type
-        // >	--> greater than
-        // <	--> less than
-        // >=	--> greater than or equal to
-        // <=	--> less than or equal to
-        // ?	--> ternary operator
+// ==	--> equal to
+// ===	--> equal value and equal type
+// !=	--> not equal
+// !==	--> not equal value or not equal type
+// >	--> greater than
+// <	--> less than
+// >=	--> greater than or equal to
+// <=	--> less than or equal to
+// ?	--> ternary operator
 
 // 4.Logical Operators
 
-        // &&	--> logical and
-        // ||	--> logical or
-        // !	--> logical not
+// &&	--> logical and
+// ||	--> logical or
+// !	--> logical not
 
 // 5.Bitwise Operators
-                                                                                
-        // &	--> AND	                    5 & 1	    0101 & 0001	    0001	 1
-        // |	--> OR	                    5 | 1	    0101 | 0001	    0101	 5
-        // ~	--> NOT	                    ~ 5	        ~0101	        1010	 10
-        // ^	--> XOR	                    5 ^ 1	    0101 ^ 0001	    0100	 4
-        // <<	--> left shift	            5 << 1	    0101 << 1	    1010	 10
-        // >>	--> right shift	            5 >> 1	    0101 >> 1	    0010	 2
-        // >>>	--> unsigned right shift	5 >>> 1	    0101 >>> 1	    0010	 2
+
+// &	--> AND	                    5 & 1	    0101 & 0001	    0001	 1
+// |	--> OR	                    5 | 1	    0101 | 0001	    0101	 5
+// ~	--> NOT	                    ~ 5	        ~0101	        1010	 10
+// ^	--> XOR	                    5 ^ 1	    0101 ^ 0001	    0100	 4
+// <<	--> left shift	            5 << 1	    0101 << 1	    1010	 10
+// >>	--> right shift	            5 >> 1	    0101 >> 1	    0010	 2
+// >>>	--> unsigned right shift	5 >>> 1	    0101 >>> 1	    0010	 2
 
 
 // ------------------------------------------------------------------------------------------------------------------------------------
@@ -91,11 +91,11 @@
 // const object1 = {
 //     key: "value",
 //   };
-  
+
 //   const object2 = {
 //     key: "value",
 //   };
-  
+
 //   console.log(object1 !== object2); // true
 //   console.log(object1 !== object1); // false
 
@@ -105,14 +105,14 @@
 // const object1 = {
 //     key: "value",
 //   };
-  
+
 //   const object2 = {
 //     key: "value",
 //   };
-  
+
 //   console.log(object1 === object2); // false
 //   console.log(object1 === object1); // true
-  
+
 
 //------------------------Mark and John are trying to compare their BMI (Body Mass Index), which is calculated using the formula------------------\\
 
@@ -154,4 +154,37 @@
 // let y=4;
 // console.log((y>5)||(y>3));
 // console.log((y>4)||(y<0));
+
+// Que-1 Javascript program to swape 2 variables.
+// Que-2 Javascript program find to square.
+// Que-3 Find the therd angle of a right triangle if to others angle are given.
+
+
+// Que-1 Javascript program to swape 2 variables.
+
+// let a = 5;
+// let b = 10;
+
+// let temp = a;
+// a = b;
+// b = temp;
+
+// console.log(`a: ${a}, b: ${b}`); // a: 10, b: 5
+
+// // Que-2 Javascript program find to square.
+
+// let x = 24;
+
+// console.log(x*x);
+
+// // Que-3 Find the therd angle of a right triangle if to others angle are given.
+
+
+// let total,c,bside=30,aside=90;
+// c=aside+bside;
+
+// total = 180-c;
+
+// console.log(total);
+
 
