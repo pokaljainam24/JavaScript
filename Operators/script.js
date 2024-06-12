@@ -155,6 +155,11 @@
 // console.log((y>5)||(y>3));
 // console.log((y>4)||(y<0));
 
+
+
+//-----------------------------------------------SOlve Que------------------------------------------------------\\
+
+
 // Que-1 Javascript program to swape 2 variables.
 // Que-2 Javascript program find to square.
 // Que-3 Find the therd angle of a right triangle if to others angle are given.
