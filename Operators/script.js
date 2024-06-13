@@ -143,13 +143,13 @@
 
 // -------------------------------------------------------------------
 
-//---- &&(logical and)
+//---- &&(logical and) this operator is always detect the false value
 
 // let x=4;
 // console.log((x<5)&&(x>3));
 // console.log((x<5)&&(x>8));
 
-// //---- ||(logical OR)
+// //---- ||(logical OR) this operator is always detect the true value
 
 // let y=4;
 // console.log((y>5)||(y>3));
@@ -176,6 +176,14 @@
 
 // console.log(`a: ${a}, b: ${b}`); // a: 10, b: 5
 
+// let j = 5;
+// let k = 8;
+// j = j + k;
+// k = j - k;
+// j = j - k;
+
+// console.log(j,k);
+
 // // Que-2 Javascript program find to square.
 
 // let x = 24;
@@ -183,7 +191,6 @@
 // console.log(x*x);
 
 // // Que-3 Find the therd angle of a right triangle if to others angle are given.
-
 
 // let total,c,bside=30,aside=90;
 // c=aside+bside;
