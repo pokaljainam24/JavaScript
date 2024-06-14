@@ -182,13 +182,17 @@
 // k = j - k;
 // j = j - k;
 
-// console.log(j,k);
+// console.log(j,k); // j: 8, k: 5
+
+
 
 // // Que-2 Javascript program find to square.
 
 // let x = 24;
 
-// console.log(x*x);
+// console.log(x*x); // x: 576
+
+
 
 // // Que-3 Find the therd angle of a right triangle if to others angle are given.
 
@@ -197,6 +201,6 @@
 
 // total = 180-c;
 
-// console.log(total);
+// console.log(total); tatal: 60
 
 
