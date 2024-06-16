@@ -27,7 +27,7 @@ console.log(j,k); // j: 8, k: 5
 // Que-2 Javascript program find to square.
 
 let x = 24;
-
+   
 console.log(x*x); // x: 576
 
 
