@@ -49,5 +49,54 @@ if (str.includes(word)) {
   console.log("The string does not contain the word 'Script'.");
 }
 
+// 9. Split the __string__ into an __array__ using __split()__ method
+
+// Example string
+// let text = "Hello, welcome to the world of JavaScript";
+// let words = text.split(" ");
+// console.log(words);
+
+// // 10. Split the string 30 Days Of JavaScript at the space using __split()__ method
+
+// // Example string
+// let text1 = "30 Days Of JavaScript";
+// let words2 = text.split(" ");
+// console.log(words2);
+
+// // 11. 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon' __split__ the string at the comma and change it to an array.
+
+// let companies = 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon';
+// let companiesArray = companies.split(',');
+// console.log(companiesArray);
+
+// let text = "30 Days Of JavaScript";
+// let words = text.split(" ");
+// console.log(words);
+
+// let textWithLimit = "apple,orange,banana,grape";
+// let fruits = textWithLimit.split(",", 3);
+// console.log(fruits);
+
+// let companies = 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon';
+// let companiesArray = companies.split(',');
+// console.log(companiesArray);
+
+// let trimmedCompaniesArray = companies.split(',').map(company => company.trim());
+// console.log(trimmedCompaniesArray);
+
+// 12. Change 30 Days Of JavaScript to 30 Days Of Python using __replace()__ method.
+
+// let space = ' '           // an empty space string
+// let firstName = 'Asabeneh'
+// let lastName = 'Yetayeh'
+// let country = 'Finland'
+// let city = 'Helsinki'
+// let language = 'JavaScript'
+// let job = 'teacher'
+// let quote = "The saying,'Seeing is Believing' is not correct in 2020."
+// let quotWithBackTick = `The saying,'Seeing is Believing' is not correct in 2020.`
+
+// let fullName = firstName + space + lastName + space + country + space + city; // concatenation, merging two string together.
+// console.log(fullName);
 
 
