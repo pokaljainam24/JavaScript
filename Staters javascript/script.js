@@ -32,5 +32,20 @@ let challenge3 = "Initial value";
 let firstWord = challenge.substring(8); // "Initial"
 console.log(firstWord);
 
+// 7. Slice out the phrase *Days Of JavaScript* from *30 Days Of JavaScript*.
 
+let originalString = "30 Days Of JavaScript";
+let slicedString = originalString.slice(5);
+console.log(slicedString);
+
+// 8. Check if the string contains a word __Script__ using __includes()__ method
+
+const str = "Your string goes here";
+const word = "Script";
+
+if (str.includes(word)) {
+  console.log("The string contains the word 'Script'.");
+} else {
+  console.log("The string does not contain the word 'Script'.");
+}
 
