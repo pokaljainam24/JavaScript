@@ -49,3 +49,5 @@ if (str.includes(word)) {
   console.log("The string does not contain the word 'Script'.");
 }
 
+
+
