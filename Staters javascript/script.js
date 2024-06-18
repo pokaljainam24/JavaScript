@@ -77,14 +77,24 @@ if (str.includes(word)) {
 // let fruits = textWithLimit.split(",", 3);
 // console.log(fruits);
 
-// let companies = 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon';
-// let companiesArray = companies.split(',');
-// console.log(companiesArray);
+let str0 = '   30 Days Of JavaScript   ';
 
-// let trimmedCompaniesArray = companies.split(',').map(company => company.trim());
-// console.log(trimmedCompaniesArray);
+console.log('Original String: "' + str0 + '"');
+let trimmedStr = str0.trim();
+console.log('Trimmed String: "' + trimmedStr + '"');
+
+// explanation
+//  'Trimmed String: "': This part of the code is a static string that will be printed as-is.
+// +: This operator concatenates the preceding string with the next part.
+// trimmedStr: The variable containing the trimmed string.
+// + '"': This concatenates a double-quote character to the end of the trimmed string.
 
 // 12. Change 30 Days Of JavaScript to 30 Days Of Python using __replace()__ method.
+
+let str1 = "30 days of javascript!";
+let newStr = str1.replace("javascript", "python");
+console.log(newStr); // Output: "30 days of python"
+
 
 // let space = ' '           // an empty space string
 // let firstName = 'Asabeneh'
@@ -98,5 +108,16 @@ if (str.includes(word)) {
 
 // let fullName = firstName + space + lastName + space + country + space + city; // concatenation, merging two string together.
 // console.log(fullName);
+
+// 13. What is character at index 15 in '30 Days Of JavaScript' string? Use __charAt()__ method.
+
+let str2 = '30 Days Of JavaScript';
+let character = str2.charAt(15);
+console.log(character); // Output: "S"
+
+// 14. What is the character code of J in '30 Days Of JavaScript' string using __charCodeAt()__
+
+
+
 
 
