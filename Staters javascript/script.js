@@ -180,3 +180,8 @@ console.log('Merged String:', mergedString); // Output: Merged String: 30 Days o
 let str9 = '30 Days Of JavaScript';
 let repeatedString = str9.repeat(2);
 console.log(repeatedString);
+
+// <!--       _
+//        .__(.)< (MEOW)
+//         \___)   
+//  ~~~~~~~~~~~~~~~~~~-->
