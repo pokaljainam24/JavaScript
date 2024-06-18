@@ -185,3 +185,56 @@ console.log(repeatedString);
 //        .__(.)< (MEOW)
 //         \___)   
 //  ~~~~~~~~~~~~~~~~~~-->
+
+
+// ### Exercise: Level 2
+
+// 1. Using console.log() print out the following statement:
+
+//     ```sh
+//     The quote 'There is no exercise better for the heart than reaching down and lifting people up.' by John Holmes teaches us to help one another.
+//     ```
+
+console.log("'There is no exercise better for the heart than reaching down and lifting people up.' by John Holmes teaches us to help one another");
+
+// 2. Using console.log() print out the following quote by Mother Teresa:
+
+//     ```sh
+//     "Love is not patronizing and charity isn't about pity, it is about love. Charity and love are the same -- with charity you give love, so don't just give money but reach out your hand instead."
+//     ```
+
+console.log("\"Love is not patronizing and charity isn't about pity, it is about love. Charity and love are the same -- with charity you give love, so don't just give money but reach out your hand instead.\" - Mother Teresa");
+
+// 3. Check if typeof '10' is exactly equal to 10. If not make it exactly equal.
+
+let number = '10';
+let num = parseInt(number);
+
+console.log(typeof num);  // outputs: "number"
+console.log(num === 10);  // outputs: true
+
+// 4. Check if parseFloat('9.8') is equal to 10 if not make it exactly equal with 10.
+
+let num1 = parseFloat('9.8');
+num = Math.ceil(num);
+
+console.log(num);  // outputs: 10
+
+// Key points:
+
+// Math.ceil() always rounds up to the nearest integer.
+// If the input number is already an integer, Math.ceil() returns the same number.
+// Math.ceil() works with both positive and negative numbers.
+
+
+// 5. Check if 'on' is found in both python and jargon
+
+let pythonWord = "python";
+let jargonWord = "jargon";
+
+if (pythonWord.includes('on') && jargonWord.includes('on')) {
+  console.log("Yes, 'on' is found in both words."); // Yes, 'on' is found in both words.
+} else {
+  console.log("No, 'on' is not found in both words.");
+}
+
