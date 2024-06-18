@@ -96,18 +96,18 @@ let newStr = str1.replace("javascript", "python");
 console.log(newStr); // Output: "30 days of python"
 
 
-// let space = ' '           // an empty space string
-// let firstName = 'Asabeneh'
-// let lastName = 'Yetayeh'
-// let country = 'Finland'
-// let city = 'Helsinki'
-// let language = 'JavaScript'
-// let job = 'teacher'
-// let quote = "The saying,'Seeing is Believing' is not correct in 2020."
-// let quotWithBackTick = `The saying,'Seeing is Believing' is not correct in 2020.`
+let space = ' '           // an empty space string
+let firstName = 'Asabeneh'
+let lastName = 'Yetayeh'
+let country = 'Finland'
+let city = 'Helsinki'
+let language = 'JavaScript'
+let job = 'teacher'
+let quote = "The saying,'Seeing is Believing' is not correct in 2020."
+let quotWithBackTick = `The saying,'Seeing is Believing' is not correct in 2020.`
 
-// let fullName = firstName + space + lastName + space + country + space + city; // concatenation, merging two string together.
-// console.log(fullName);
+let fullName = firstName + space + lastName + space + country + space + city; // concatenation, merging two string together.
+console.log(fullName);
 
 // 13. What is character at index 15 in '30 Days Of JavaScript' string? Use __charAt()__ method.
 
@@ -117,7 +117,66 @@ console.log(character); // Output: "S"
 
 // 14. What is the character code of J in '30 Days Of JavaScript' string using __charCodeAt()__
 
+let str3 = '30 Days Of JavaScript';
+let index = 11; // Index of 'J'
+let charCode = str3.charCodeAt(index);
+console.log('Character code of "J":', charCode); // Output: Character code of "J": 74
 
+// 15. Use __indexOf__ to determine the position of the first occurrence of __a__ in 30 Days Of JavaScript
 
+let str4 = '30 Days Of JavaScript';
+let position = str4.indexOf('a');
+console.log(position); // Output: Position of "a": 4
 
+// 16. Use __lastIndexOf__ to determine the position of the last occurrence of __a__ in 30 Days Of JavaScript.
 
+let string = '30 Days Of JavaScript';
+let lastPosition = string.lastIndexOf('a');
+console.log('Last position of "a":', lastPosition); // Output: Last position of "a": 14
+
+// 17. Use __indexOf__ to find the position of the first occurrence of the word __because__ in the following sentence:__'You cannot end a sentence with because because because is a conjunction'__
+
+let sentence = 'You cannot end a sentence with because because because is a conjunction';
+let position1 = sentence.indexOf('because');
+console.log('Position of "because":', position1); // Output: Position of "because": 31
+
+// 18. Use __lastIndexOf__ to find the position of the last occurrence of the word __because__ in the following sentence:__'You cannot end a sentence with because because because is a conjunction'__
+
+let string1 = '30 Days Of JavaScript';
+let lastPosition3 = string1.lastIndexOf('a');
+console.log('Last position of "a":', lastPosition3);
+
+// 19. Use __search__ to find the position of the first occurrence of the word __because__ in the following sentence:__'You cannot end a sentence with because because because is a conjunction'__
+
+let string2 = '30 Days Of JavaScript';
+let lastPosition4 = string2.search('a');
+console.log('Last position of "a":', lastPosition4);
+
+// 20. Use __startsWith()__ method with the string *30 Days Of JavaScript* and make the result true
+
+let name12345 = '30 Days Of JavaScript';
+console.log(name12345.startsWith('30 D'));
+
+// 21. Use __endsWith()__ method with the string *30 Days Of JavaScript* and make the result true
+
+let character1 = '30 Days Of JavaScript';
+console.log(character1.endsWith('JavaScript'));
+
+// 22. Use __match()__ method to find all the __a__’s in 30 Days Of JavaScript
+
+let str8 = '30 Days Of JavaScript';
+let matches = str8.match(/a/g);
+console.log('All occurrences of "a":', matches); // Output: All occurrences of "a": [ 'a', 'a' ]
+
+// 23. Use __concat()__ and merge '30 Days of' and 'JavaScript' to a single string, '30 Days Of JavaScript'
+
+let part1 = '30 Days of';
+let part2 = ' JavaScript';
+let mergedString = part1.concat(part2);
+console.log('Merged String:', mergedString); // Output: Merged String: 30 Days of JavaScript
+
+// 24. Use __repeat()__ method to print 30 Days Of JavaScript 2 times
+
+let str9 = '30 Days Of JavaScript';
+let repeatedString = str9.repeat(2);
+console.log(repeatedString);

@@ -82,3 +82,4 @@
 // console.log(NaN == NaN); //false // nan is not equal to anything, not even itself. it is not possible to convert the two values as equal
 // console.log(NaN === NaN); //false // NaN is not equal to anything
 
+console.log(123>22>3);
