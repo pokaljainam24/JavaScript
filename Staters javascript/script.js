@@ -181,6 +181,7 @@ let str9 = '30 Days Of JavaScript';
 let repeatedString = str9.repeat(2);
 console.log(repeatedString);
 
+
 // <!--       _
 //        .__(.)< (MEOW)
 //         \___)   
@@ -215,8 +216,8 @@ console.log(num === 10);  // outputs: true
 
 // 4. Check if parseFloat('9.8') is equal to 10 if not make it exactly equal with 10.
 
-let num1 = parseFloat('9.8');
-num = Math.ceil(num);
+let num1 = Math.abs(-9.234);
+num = Math.ceil(num1);
 
 console.log(num);  // outputs: 10
 
@@ -236,5 +237,33 @@ if (pythonWord.includes('on') && jargonWord.includes('on')) {
   console.log("Yes, 'on' is found in both words."); // Yes, 'on' is found in both words.
 } else {
   console.log("No, 'on' is not found in both words.");
+}
+
+
+
+
+// Assume these variables are defined
+let currentPasswordStoredInTheSystem = "oldPassword";
+let currentPassword = "oldPassword";
+let newPassword = "newPassword";
+let confirmPassword = "newPassword";
+
+// Check if the current password is correct
+if (currentPassword!== currentPasswordStoredInTheSystem) {
+  console.log("Invalid current password");
+} else {
+  // Check if the new password and confirm password match
+  if (newPassword!== confirmPassword) {
+    console.log("New password and confirm password do not match");
+  } else {
+    // Check if the new password meets the password requirements (e.g. length, complexity)
+    if (newPassword.length < 8) {
+      console.log("New password must be at least 8 characters long");
+    } else {
+      // Update the password in the system
+      currentPasswordStoredInTheSystem = newPassword;
+      console.log("Password changed successfully");
+    }
+  }
 }
 
