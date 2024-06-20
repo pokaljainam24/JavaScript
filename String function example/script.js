@@ -105,11 +105,11 @@ if (units <= 50) {
 } else if (units <= 250) {
   totalBill = 50 * 0.50 + 100 * 0.75 + (units - 150) * 1.20;
 } else {
-  totalBill = 220 + (units - 250) * 1.50;
+  totalBill = 50 * 0.50 + 100 * 0.75 + 100 * 1.20 + (units - 250) * 1.50;
 }
 
 // Add a 20% surcharge to the bill
-totalBill *= 0.20;
+totalBill *= 1.20;
 
 // Print the total bill
 alert("The total electricity bill is: Rs. " + totalBill.toFixed(2));
