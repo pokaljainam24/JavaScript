@@ -18,3 +18,13 @@ for (i=1; i<=5; i++){
     }
     console.log(str);
 }
+
+for(j=1; j<=5; j++){
+    str = '';
+    str = '';
+    for(i=1; i<=j; i++){
+        str += ' 1';
+        str += ' 2';
+    }
+    console.log(str);
+}
