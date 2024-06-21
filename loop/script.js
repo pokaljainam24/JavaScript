@@ -10,7 +10,11 @@ for(i=10; i>=0; i--){
 for (i=1; i<=5; i++){
     str = '';
     for(j=1; j<=i; j++){
-        str += '* ';
+        str += ' * ';
+    }
+    console.log(str);
+    for(j=0; j<=i; j++){
+        str += ' * ';
     }
     console.log(str);
 }
