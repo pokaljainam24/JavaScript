@@ -226,7 +226,7 @@
 //     }
 // } else if (month === "April" || month === "June" || month === "September" || month === "November") {
 //     alert(`There are 30 days in month/year.`);
-// } else if (month === "January" || month === "March" || month === "May" || month === "July" || month === "August" || month === "October" || month === "December") {
+// } else if (month === "January" || month === "March" || month === "May" || month === "July" || month === "August" || month === "October" || month === "December"){
 //     alert(`There are 31 days in month/year.`);
 // } else {
 //     alert("Invalid month");
