@@ -14,5 +14,7 @@ let b = [1, 2, 3, 4, 5];
 let c = [true, false, true, false];
 console.log(typeof a,b,c);
 
-// Output: object number boolean
+// Output: a=object b=number c=boolean
+
+
 
