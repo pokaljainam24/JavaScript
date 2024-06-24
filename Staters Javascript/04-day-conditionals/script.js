@@ -86,9 +86,9 @@
 //     9 is is an odd number.
 //     ```
 
-// const num = prompt("Enter a number: ");
+// const num = prompt("Enter a number: "); // open dialog box and enter the number
 
-// if (num % 2 === 0){
+// if (num % 2 === 0) //The condition num % 2 === 0 checks whether the remainder of dividing num by 2 is 0.{ // chech the number is even or odd 
 //     console.log('num is even number');
 // }else{
 //     console.log('num is odd number.');
