@@ -34,4 +34,3 @@ console.log(frinds[frinds.length - 1]);
 frinds[1] = 'Chirru';
 frinds[2] = 'Kritu';
 console.log(frinds);
-
