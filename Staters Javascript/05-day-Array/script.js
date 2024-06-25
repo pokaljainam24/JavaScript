@@ -16,5 +16,22 @@ console.log(typeof a,b,c);
 
 // Output: a=object b=number c=boolean
 
+const frind = 'Jainam';
+const frind1 = 'Vraj';
+const frind2 = 'Romil';
 
+const frinds = ['Jainam', 'Vraj', 'Romil'];
+console.log(frinds);
+
+const years = new Array(2000, 2003, 2004, 2005);
+
+console.log(frinds[0]);
+console.log(frinds[2]);
+
+console.log(frinds.length);
+console.log(frinds[frinds.length - 1]);
+
+frinds[1] = 'Chirru';
+frinds[2] = 'Kritu';
+console.log(frinds);
 
