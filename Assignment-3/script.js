@@ -43,45 +43,21 @@ console.log("Number of digits: " + count);
 
 // 4- Program to Print the Fibonacci Sequence.
 
-// function nthFibonacci(currNum) {
-//   if(currNum <= 1) {
-//       return currNum;
-//   }
-//   else {
-//       return nthFibonacci(currNum-1) + nthFibonacci(currNum - 2);
-//   }
-// }
+const N = 10; 
+let fn1 = 0, fn2 = 1, nextFibonacci;
 
-// const N = prompt('Enter the number of terms: ');
-
-// let fn1 = 0, fn2 = 1, nextFibonacci;
-
-// console.log('Fibonacci Series upto N terms is:');
-
-// for (let i = 0; i < N; i++) {
-//   console.log(nthFibonacci(i));   
-// }
-
-// Type-2
-
-// const N = 10; 
-
-// let fn1 = 0, fn2 = 1, nextFibonacci;
-
-// console.log('Fibonacci Series upto ' + N + ' terms is:');
-
-// for (let i = 0; i < N; i++) {
-//   if (i === 0) {
-//     console.log(fn1);
-//   } else if (i === 1) {
-//     console.log(fn2);
-//   } else {
-//     nextFibonacci = fn1 + fn2;
-//     fn1 = fn2;
-//     fn2 = nextFibonacci;
-//     console.log(nextFibonacci);
-//   }
-// }
+for (let i = 0; i < N; i++) {
+  if (i === 0) {
+    console.log(fn1);
+  } else if (i === 1) {
+    console.log(fn2);
+  } else {
+    nextFibonacci = fn1 + fn2;
+    fn1 = fn2;
+    fn2 = nextFibonacci;
+    console.log(nextFibonacci);
+  }
+}
 
 // 5- JavaScript Program to Find the Palindrome Number or not.
 
