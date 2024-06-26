@@ -70,4 +70,3 @@ if (str === reversedStr) {
 } else {
     console.log(number2 + ' is not a palindrome.');
 }
-
