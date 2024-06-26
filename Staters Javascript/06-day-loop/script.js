@@ -153,37 +153,7 @@ switch (day) {
 }
 
 
-// 1-Print odd numbers from 1 to 15.
 
-let number1 = 1;
-let sum1 = 0;
-while (number1 <= 15) {
-  if (number1 % 2 === 0) {
-    sum1 += number1;
-    console.log(number1);
-  }
-  number1++;
-}
-console.log("sum of odd number:" + sum1);
-
-// 2- program to find sum of first and last digit of a number. Using while loop
-
-let number = 12345;
-let rightnumber = number;
-let firstDigit;
-let lastDigit = number % 10;
-
-while (number >= 10) {
-  number = (number - number%10)/10;
-}
-
-firstdigit = number;
-let sum2 = firstDigit + lastDigit;
-
-console.log("rightnumber: " +rightnumber);
-console.log("firstDigit: " +firstdigit);
-console.log("lastDigit: " +lastDigit);
-console.log("sum2 of first and last digit: " + sum2);
 
 
 
