@@ -61,7 +61,7 @@ for (let i = 0; i < N; i++) {
 
 // 5- JavaScript Program to Find the Palindrome Number or not.
 
-const number2 = prompt('Enter the number of terms: '); // You can change this number to test other values
+const number2 = prompt('Enter the number of terms: '); 
 const str = number2.toString();
 const reversedStr = str.split('').reverse().join('');
 
