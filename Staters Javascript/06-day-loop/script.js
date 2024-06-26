@@ -107,16 +107,16 @@ console.log(`The factorial of ${num} is ${factorial}`);
 
 /* Sum of even number */
 
-let number = 1;
-let sum = 0;
-while (number <= 20) {
-  if (number % 2 === 0) {
-    sum += number;
-    console.log(number);
-  }
-  number++;
-}
-console.log("sum of even number:" + sum);
+// let number = 1;
+// let sum = 0;
+// while (number <= 20) {
+//   if (number % 2 === 0) {
+//     sum += number;
+//     console.log(number);
+//   }
+//   number++;
+// }
+// console.log("sum of even number:" + sum);
 
 
 
@@ -168,21 +168,23 @@ console.log("sum of odd number:" + sum1);
 
 // 2- program to find sum of first and last digit of a number. Using while loop
 
-let num1 = 12345;
-let a = num1;
-let lastDigit = num1 % 10;
+let number = 12345;
+let rightnumber = number;
 let firstDigit;
+let lastDigit = number % 10;
 
-while (num1 >= 10) {
-  num1 = (num1 - num1%10)/10;
+while (number >= 10) {
+  number = (number - number%10)/10;
 }
 
-firstDigit = num1;
+firstdigit = number;
 let sum2 = firstDigit + lastDigit;
 
-console.log("a"+a);
-console.log("firstDigit"+firstdigit);
-console.log("lastDigit"+lastDigit);
-console.log("sum of first and last digit:" + sum2);
+console.log("rightnumber: " +rightnumber);
+console.log("firstDigit: " +firstdigit);
+console.log("lastDigit: " +lastDigit);
+console.log("sum2 of first and last digit: " + sum2);
+
+
 
 
