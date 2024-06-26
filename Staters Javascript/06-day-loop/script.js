@@ -62,6 +62,9 @@
 // } while (num !== -1);
 
 
+
+
+/* Factorial Number */
 let num = 6; // 6! = 6 × 5 × 4 × 3 × 2 × 1 = 720 // change this to calculate the factorial of a different number
 let factorial = 1;
 let i = 1;
@@ -81,6 +84,43 @@ console.log(`The factorial of ${num} is ${factorial}`);
 // Multiply 120 by the next smallest integer, which is 3: 120 × 3 = 360
 // Multiply 360 by the next smallest integer, which is 2: 360 × 2 = 720
 // Finally, multiply 720 by the next smallest integer, which is 1: 720 × 1 = 720
+
+
+
+
+/* count 1to5 using do while */
+// let count = 1;
+
+// do{
+//   console.log(count);
+//   count++;
+// }while(count<=5);
+
+
+
+// const fruit = [];
+// let i = 0;
+// while (i < fruit.length) {
+//   console.log(fruit[i]);
+//   i++;
+// }
+
+/* Sum of even number */
+
+let number = 1;
+let sum = 0;
+while (number <= 20) {
+  if (number % 2 === 0) {
+    sum += number;
+    console.log(number);
+  }
+  number++;
+}
+console.log("sum of even number:" + sum);
+
+
+
+
 
 
 
@@ -108,6 +148,41 @@ switch (day) {
   case 'Sunday':
     console.log('Today is Weekend');
     break;
-    default:
-      console.log('Invalid day');
+  default:
+    console.log('Invalid day');
 }
+
+
+// 1-Print odd numbers from 1 to 15.
+
+let number1 = 1;
+let sum1 = 0;
+while (number1 <= 15) {
+  if (number1 % 2 === 0) {
+    sum1 += number1;
+    console.log(number1);
+  }
+  number1++;
+}
+console.log("sum of odd number:" + sum1);
+
+// 2- program to find sum of first and last digit of a number. Using while loop
+
+let num1 = 12345;
+let a = num1;
+let lastDigit = num1 % 10;
+let firstDigit;
+
+while (num1 >= 10) {
+  num1 = (num1 - num1%10)/10;
+}
+
+firstDigit = num1;
+let sum2 = firstDigit + lastDigit;
+
+console.log("a"+a);
+console.log("firstDigit"+firstdigit);
+console.log("lastDigit"+lastDigit);
+console.log("sum of first and last digit:" + sum2);
+
+
