@@ -34,3 +34,22 @@ console.log(frinds[frinds.length - 1]);
 frinds[1] = 'Chirru';
 frinds[2] = 'Kritu';
 console.log(frinds);
+
+// ### Creating an array using split
+
+let Name = 'jainampokal';
+let charInjainampokal = Name.split('');
+console.log(charInjainampokal);
+
+let companyname = 'facebook, google, microsoft, apple,  ibm, amazon';
+let company = companyname.split(', ');
+console.log(company);
+
+let fruit = ['banana', 'orange', 'mango', 'lemon']
+let index = fruit.indexOf('banana')
+
+if(index === -1){
+    console.log('does not exist in the array')
+}else{
+    console.log('exist in the array')
+}
