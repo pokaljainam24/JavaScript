@@ -59,6 +59,20 @@ for (let i = 0; i < N; i++) {
   }
 }
 
+// Type-2
+
+let a = 15;
+let num1=0, num2=1, sum;
+count=1;
+while(count<=a){
+  console.log(num1);
+  sum=num1+num2;
+  num1=num2;
+  num2=sum;
+  count++;
+}
+console.log(sum);
+
 // 5- JavaScript Program to Find the Palindrome Number or not.
 
 const number2 = prompt('Enter the number of terms: '); 
