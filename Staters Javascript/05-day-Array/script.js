@@ -53,3 +53,4 @@ if(index === -1){
 }else{
     console.log('exist in the array')
 }
+
