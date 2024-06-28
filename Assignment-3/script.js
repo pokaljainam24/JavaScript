@@ -75,32 +75,47 @@ console.log(sum);
 
 // 5- JavaScript Program to Find the Palindrome Number or not.
 
-const number2 = prompt('Enter the number of terms: '); 
-const str = number2.toString();
-const reversedStr = str.split('').reverse().join('');
+// const number2 = prompt('Enter the number of terms: '); 
+// const str = number2.toString();
+// const reversedStr = str.split('').reverse().join('');
 
-if (str === reversedStr) {
-    console.log(number2 + ' is a palindrome.');
-} else {
-    console.log(number2 + ' is not a palindrome.');
+// if (str === reversedStr) {
+//     console.log(number2 + ' is a palindrome.');
+// } else {
+//     console.log(number2 + ' is not a palindrome.');
+// }
+
+// // Type-2
+
+// let input = prompt("Enter a string:");
+// let i = 0;
+// let j = input.length - 1;
+
+// while (i < j) {
+//   if (input[i] !== input[j]) {
+//     console.log("Not a palindrome");
+//     break;
+//   }
+//   i++;
+//   j--;
+// }
+
+// if (i >= j) {
+//   console.log("Palindrome");
+// }
+
+// Type-3
+
+var pnum = 121;
+var rnum = 0;
+var temp = pnum;
+while (temp > 0) {
+  var rem = temp % 10;
+  rnum = rnum * 10 + rem;
+  temp = parseInt(temp / 10);
 }
-
-
-// Type-2
-
-let input = prompt("Enter a string:");
-let i = 0;
-let j = input.length - 1;
-
-while (i < j) {
-  if (input[i] !== input[j]) {
-    console.log("Not a palindrome");
-    break;
-  }
-  i++;
-  j--;
-}
-
-if (i >= j) {
+if (pnum == rnum) {
   console.log("Palindrome");
+}else{
+  console.log("Not a palindrome");
 }
