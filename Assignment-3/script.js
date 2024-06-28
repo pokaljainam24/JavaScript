@@ -84,3 +84,23 @@ if (str === reversedStr) {
 } else {
     console.log(number2 + ' is not a palindrome.');
 }
+
+
+// Type-2
+
+let input = prompt("Enter a string:");
+let i = 0;
+let j = input.length - 1;
+
+while (i < j) {
+  if (input[i] !== input[j]) {
+    console.log("Not a palindrome");
+    break;
+  }
+  i++;
+  j--;
+}
+
+if (i >= j) {
+  console.log("Palindrome");
+}
