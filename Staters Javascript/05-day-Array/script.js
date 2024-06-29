@@ -54,3 +54,11 @@ if(index === -1){
     console.log('exist in the array')
 }
 
+
+// check the posotion on fruit name
+
+const Names = ['banana', 'orange', 'mango', 'lemon']
+const lifo = Names.lastIndexOf('lemon')
+console.log(lifo);
+
+
