@@ -60,6 +60,3 @@ if(index === -1){
 const Names = ['banana', 'orange', 'mango', 'lemon']
 const lifo = Names.lastIndexOf('lemon')
 console.log(lifo);
-
-
-  
