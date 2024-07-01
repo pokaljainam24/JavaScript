@@ -54,9 +54,28 @@ if(index === -1){
     console.log('exist in the array')
 }
 
+// const str = "hello";
+// const chars = str.split("");
+// console.log(chars);
+
 
 // check the posotion on fruit name
 
-const Names = ['banana', 'orange', 'mango', 'lemon']
-const lifo = Names.lastIndexOf('lemon')
-console.log(lifo);
+// const Names = ['banana', 'orange', 'mango', 'lemon']
+// const lifo = Names.lastIndexOf('lemon')
+// console.log(lifo);
+
+//* Reverse
+// const Names = ['banana', 'orange', 'mango', 'lemon']
+// const arr = Names.reverse();
+// console.log(arr);
+
+//* SLice
+// const Names = ['banana', 'orange', 'mango', 'lemon']
+// const arr = Names.slice(2);
+// console.log(arr);
+
+//* Split
+// const str = "jainampokal";
+// const l = str.split("");
+// console.log(l);
