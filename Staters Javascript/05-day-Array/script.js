@@ -357,3 +357,33 @@ console.log("Average age:", averageAge);
 console.log("Range of ages:", rangeAges);
 console.log("Difference (min - average):", diffMinAverage);
 console.log("Difference (max - average):", diffMaxAverage);
+
+
+// function division(a, b) {
+//     if (a !== 0 && b !== 0) {
+//         console.log("division is :" + (a / b));
+
+//         function add() {
+//             return a + b;
+//         }
+//     }
+//     console.log("Addition is : " + add(5, 5));
+// }
+
+// division(12, 2);
+
+let arr3 = [100,2,5,30,24,42,20,10000,500]
+let arr4 = arr3.sort().map(String);
+console.log(arr4);
+
+// let arr1 = [3,4,92,32,12,42,1,0]
+// let arr2 = arr1.sort().map(String)
+// console.log(arr2)
+
+let arr1 = [3,4,92,32,12,42,10000,0]
+let arr2 = arr1.sort();
+console.log(arr2)
+
+const names6 = ["amazone","google","facebook","oracle"]
+const names7 = names6.sort()
+console.log(names7)
