@@ -342,7 +342,7 @@ if (ages.length % 2 === 0) {
 const sumAges = ages.reduce((acc, curr) => acc + curr, 0);
 const averageAge = sumAges / ages.length;
 
-// Find the range of ages
+// Find the range of ages`
 const rangeAges = maxAge - minAge;
 
 // Compare (min - average) and (max - average)
@@ -384,6 +384,22 @@ let arr1 = [3,4,92,32,12,42,10000,0]
 let arr2 = arr1.sort();
 console.log(arr2)
 
-const names6 = ["amazone","google","facebook","oracle"]
-const names7 = names6.sort()
-console.log(names7)
+const names6 = ["amazone","google","facebook","oracle"];
+const names7 = names6.sort();
+console.log(names7);
+
+
+
+let numbers = [5,1,100,380,50,96];
+
+for (let i = 0; i < numbers.length; i++) {
+    for (let j = 0; j < numbers.length; j++) {
+        if (numbers[j] > numbers[j + 1]) {
+            let temp = numbers[j];
+            numbers[j] = numbers[j + 1];
+            numbers[j + 1] = temp;
+        }
+    }
+}
+
+console.log(numbers); 
