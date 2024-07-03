@@ -167,4 +167,137 @@ for (let i = 0; i <= 100; i++) {
 
 console.log("The sum of all numbers from 0 to 100 is:", sum);
 
+// 11. Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds.
+
+//     ```sh
+//     The sum of all evens from 0 to 100 is 2550. And the sum of all odds from 0 to 100 is 2500.
+//     ```
+
+let sum1 = 0;
+let sum2 = 0;
+for (let i = 0; i <= 100; i++) {
+  if (i % 2 !== 0) {
+    sum1 += i;
+  }else{
+    sum2 += i;
+  }
+}
+console.log("The sum of all evens from 0 to 100 is:", sum1);
+
+// 12. Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds. Print sum of evens and sum of odds as array
+
+//     ```sh
+//       [2550, 2500]
+//     ```
+
+
+let sum3 = 0;
+let sum4 = 0;
+for (let i = 0; i <= 100; i++) {
+  if (i % 2 === 0){
+    sum3 += i;
+  }else{
+    sum4 += i;
+  }
+}
+console.log([sum3,sum4]);
+
+// 13. Develop a small script which generate array of 5 random numbers
+
+let number = []
+for (let i = 0; i < 5; i++) {
+  number.push(Math.floor(Math.random() * i));
+}
+console.log(number);
+
+// 14. Develop a small script which generate array of 5 random numbers and the numbers must be unique
+
+let number1 = []
+for (let i = 0; i < 5; i++) {
+  let random = Math.floor(Math.random() * 100);
+  if (number1.includes(random)) {
+    i--;
+  }else{
+    number1.push(random);
+  }
+}
+
+console.log(number1);
+
+// 15. Develop a small script which generate a six characters random id:
+
+//     ```sh
+//     5j2khz
+//     ```
+
+let randomId = Math.random().toString(36).substring(2,8);
+console.log(randomId);
+
+
+
+
+// ### Exercises: Level 2 ### //
+
+// 1. Develop a small script which generate any number of characters random id:
+
+//     ```sh
+//       fe3jo1gl124g
+//     ```
+
+//     ```sh
+//       xkqci4utda1lmbelpkm03rba
+//     ```
+
+const characters = 'fe3jo1gl124g';
+const characters1 = 'xkqci4utda1lmbelpkm03rba';
+
+let id = '';
+let id2 = '';
+for (let i = 0; i < 10; i++) {
+  id += characters[Math.floor(Math.random() * characters.length)];
+}
+for (let i = 0; i < 20; i++){
+  id2 += characters1[Math.floor(Math.random() * characters1.length)];
+}
+console.log(id);
+console.log(id2);
+
+// 2. Write a script which generates a random hexadecimal number.
+
+//     ```sh
+//     '#ee33df'
+//     ```
+
+let hex = '#';
+for (let i = 0; i < 6; i++) {
+  hex += Math.floor(Math.random() * 16).toString(16);
+}
+console.log(hex);
+
+// 1. Write a script which generates a random rgb color number.
+
+//     ```sh
+//     rgb(240,180,80)
+//     ```
+
+let rgb = 'rgb(';
+for (let i = 0; i < 3; i++) {
+
+  rgb += Math.floor(Math.random() * 256) + ', '; 
+}
+console.log(rgb.slice(0, -2) + ')');
+
+// 1. Using the above countries array, create the following new array.
+
+//     ```sh
+//     ["ALBANIA", "BOLIVIA", "CANADA", "DENMARK", "ETHIOPIA", "FINLAND", "GERMANY", "HUNGARY", "IRELAND", "JAPAN", "KENYA"]
+//     ```
+
+let arr = ["ALBANIA", "BOLIVIA", "CANADA", "DENMARK", "ETHIOPIA", "FINLAND", "GERMANY", "HUNGARY", "IRELAND", "JAPAN", "KENYA"];
+let arr2 = [];
+console.log(arr)
+for (let i = 0; i < arr.length; i++) {
+  arr2.push(arr[i].toLocaleLowerCase());
+}
+console.log(arr2);
 
