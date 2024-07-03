@@ -1,0 +1,170 @@
+// # 📔 Day 6 # //
+
+// ### for Loop
+
+for(let i = 0; i <= 5; i++){
+console.log(i);
+}
+
+for(let i = 5; i >= 0; i--){
+  console.log(i);
+}
+
+for(let i = 0; i <= 10; i++){
+  console.log(`${i} * ${i} = ${i * i}`)
+}
+
+const countries = ['India','Usa','Canada','Uk'];
+const newArr = [];
+for(let i=0; i < countries.length; i++){
+  newArr.push(countries[i].toUpperCase());
+}
+console.log(newArr);
+
+// Adding all elements in the array
+
+const numbers = [1,2,3,4,5];
+let sum = 0;
+for(let i = 0; i < numbers.length; i++){
+  sum += numbers[i];
+}
+console.log(sum);
+
+// Creating a new array based on the existing array
+
+const numbers1 = [1,2,3,8,9];
+const numbers2 = [];
+for(let i = 0; i < numbers1.length; i++){
+  numbers2.push(numbers1[i]**4);
+}
+console.log(numbers2);
+
+// ### for of loop
+
+// We use for of loop for arrays. It is very hand way to iterate through an array if we are not interested in the index of each element in the array.
+
+// ### Exercises: Level 1
+
+// 1. Iterate 0 to 10 using for loop, do the same using while and do while loop
+
+let i = 0;
+for(i=0; i<=10; i++){
+  console.log(i);
+}
+// while loop
+i=0;
+while(i<=10){
+  console.log(i);
+  i++;
+}
+// do while loop
+i=0;
+do{
+  console.log(i);
+  i++;
+}while(i<=10)
+
+// 2. Iterate 10 to 0 using for loop, do the same using while and do while loop
+
+i=10;
+for(i=10; i>=0; i--){
+  console.log(i);
+}
+//while loop
+i=10;
+while(i>=0){
+  console.log(i);
+  i--;
+}
+// do while loop
+i=10;
+do{
+  console.log(i);
+  i--;
+}while(i>=0)
+
+// 3. Iterate 0 to n using for loop
+
+// n is a variable which stores a number
+let n = 10;
+for(i=0; i<=n; i++){
+  console.log(i);
+}
+
+// 4. Write a loop that makes the following pattern using console.log():
+
+for(i=1; i<=7; i++){
+  console.log('# '.repeat(i));
+}
+
+// 5. Use loop to print the following pattern:
+
+for(let i=0; i<=10; i++){
+  console.log(`${i} * ${i} = ${i * i}`);
+}
+
+// 6. Using loop print the following pattern
+
+//    ```sh
+//     i    i^2   i^3
+//     0    0     0
+//     1    1     1
+//     2    4     8
+//     3    9     27
+//     4    16    64
+//     5    25    125
+//     6    36    216
+//     7    49    343
+//     8    64    512
+//     9    81    729
+//     10   100   1000
+
+for(let i=0; i<=10; i++){
+  console.log(`${i} = ${i*i} = ${i*i*i}`);
+}
+
+// 7. Use for loop to iterate from 0 to 100 and print only even numbers
+
+for(let i=0; i<=100; i++){
+  if(i%2==0){
+    console.log("Only Even Number: " +i);
+  }
+}
+
+// 8. Use for loop to iterate from 0 to 100 and print only odd numbers
+
+for(let i=0; i<=100; i++){
+  if(i%2!=0){
+    console.log("Only Odd Number: " +i);
+  }
+}
+
+// 9. Use for loop to iterate from 0 to 100 and print only prime numbers
+
+for(let i=0; i<=100; i++){
+  let count = 0;
+  for(let j=1; j<=i; j++){
+    if(i%j==0){
+      count++;
+    }
+  }
+  if(count==2){
+    console.log("Prime Number: " +i);
+  }
+}
+
+// 10. Use for loop to iterate from 0 to 100 and print the sum of all numbers.
+
+//     ```sh
+//     The sum of all numbers from 0 to 100 is 5050.
+//     ```
+
+let n1 = 100;
+
+for (let i = 0; i <= 100; i++) {
+  sum = n1 * (n1 + 1) / 2;
+}
+
+console.log("The sum of all numbers from 0 to 100 is:", sum);
+
+
