@@ -185,8 +185,8 @@ console.log(CompaniesName.includes("facebook"));
 
 // 14. Filter out companies which have more than one 'o' without the filter method
 
-const CompaniesName1 = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"];
-const filter = CompaniesName1.filter((company) => company.includes("o"));
+const CompaniesName1 = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle"];
+const filter = CompaniesName1.filter((company) => company.includes("o","o"));
 console.log(filter);
 
 // 15. Sort the array using _sort()_ method
