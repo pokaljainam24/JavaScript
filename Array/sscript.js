@@ -52,3 +52,7 @@ console.log(numbers);
 let arr = [5, 1, 100, 380, 50, 96];
 arr.sort((a, b)=>(a-b));
 console.log(arr);
+
+const arr6 = [1,2,3,4,5,6];
+arr6.splice(1,3,24,45);
+console.log(arr6);
