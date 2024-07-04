@@ -123,3 +123,4 @@ console.log(b);
 
 //     [n: number]: T;
 // }
+
