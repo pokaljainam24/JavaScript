@@ -59,24 +59,24 @@ console.log(arr6);
 
 // prime number
 
-let prime = parseInt(prompt("Enter Prime Number"));
-for (let i = 0; i <= prime; i++) {
-    let count = 0;
-    for (let j = 1; j <= i; j++) {
-        if (i % j == 0) {
-            count++;
-        }
-    }
-    if (count === 2) {
-        console.log("Prime Number: " + i);
-    }
-}
+// let prime = parseInt(prompt("Enter Prime Number"));
+// for (let i = 0; i <= prime; i++) {
+//     let count = 0;
+//     for (let j = 1; j <= i; j++) {
+//         if (i % j == 0) {
+//             count++;
+//         }
+//     }
+//     if (count === 2) {
+//         console.log("Prime Number: " + i);
+//     }
+// }
 
 const ComName = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"];
 const slicecompanies2 = ComName.slice(-4, -1);
 console.log("Slice:", slicecompanies2);
 
-let a = [1,2,3,4,5,6,7,8,9,7,9,2,4,8];
+let a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 7, 9, 2, 4, 8];
 let b = a.length;
 console.log(b);
 
@@ -124,3 +124,71 @@ console.log(b);
 //     [n: number]: T;
 // }
 
+// Reduse
+
+let number = [1, 2, 3, 4, 5, 6, 7, 8];
+let sum = number.reduce((previousValue, currentvalue) => previousValue + currentvalue, 1);
+console.log(sum);
+
+
+// Using Map Method
+
+let arrNew = [
+    ['Albania', 'ALB', 7],
+    ['Bolivia', 'BOL', 7],
+    ['Canada', 'CAN', 6],
+    ['Denmark', 'DEN', 7],
+    ['Ethiopia', 'ETH', 8],
+    ['Finland', 'FIN', 7],
+    ['Germany', 'GER', 7],
+    ['Hungary', 'HUN', 7],
+    ['Ireland', 'IRE', 7],
+    ['Iceland', 'ICE', 7],
+    ['Japan', 'JAP', 5],
+    ['Kenya', 'KEN', 5],
+];
+
+const countries = arrNew.map(([country, code, number]) => ({
+    country,
+    code,
+    number,
+}));
+
+console.log(countries);
+
+let arrnew = [
+    {
+        country: 'Albania', code: 'ALB', number: 7
+        [{ country: 'Bolivia', code: 'BOL', number: 7 }]
+    },
+    { country: 'Bolivia', code: 'BOL', number: 7 },
+    { country: 'Canada', code: 'CAN', number: 6 },
+    { country: 'Denmark', code: 'DEN', number: 7 },
+    { country: 'Ethiopia', code: 'ETH', number: 8 },
+    { country: 'Finland', code: 'FIN', number: 7 },
+    { country: 'Germany', code: 'GER', number: 7 },
+    { country: 'Hungary', code: 'HUN', number: 7 },
+    { country: 'Ireland', code: 'IRE', number: 7 },
+    { country: 'Iceland', code: 'ICE', number: 7 },
+    { country: 'Japan', code: 'JAP', number: 5 },
+    { country: 'Kenya', code: 'KEN', number: 5 }
+];
+
+let transformedArr = arrnew.map(item => ({
+    country: item.country.toUpperCase(),
+    code: item.code.toLowerCase(),
+    number: item.number
+}));
+
+console.log(transformedArr);
+
+  let test=[{}]=arrnew;
+
+  console.log({test});
+
+
+// let test1 = ['apple', 'banana'];
+
+// let test2 = [a,] = test1;
+
+// console.log(a);
