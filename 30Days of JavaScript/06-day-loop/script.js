@@ -392,3 +392,46 @@ for (let i = 0; i < countries3.length; i++) {
 }
 console.log(maxCountry);
 
+// 5. Using the above countries array, find the country containing only 5 characters.
+
+//     ```sh
+//     ['Japan', 'Kenya']
+//     ```
+
+let countries4 = ['Alban', 'Bolivia','Ethiopia','India','Canada'];
+let fiveChar = countries4.filter(country => country.length === 5);
+if (fiveChar.length > 0) {
+  console.log(fiveChar);
+}
+
+// 6. Find the longest word in the webTechs array
+
+const webTechs = ['HTML', 'CSS', 'JavaScript', 'React', 'Redux', 'Node', 'MongoDB'];
+
+const longestWord = webTechs.reduce((longest, current) => {
+  if (current.length > longest.length) {
+    return current;
+  } else {
+    return longest;
+  }
+});
+
+console.log(longestWord);
+
+// 7. Use the webTechs array to create the following array of arrays:
+
+//     ```sh
+//     [["HTML", 4], ["CSS", 3],["JavaScript", 10],["React", 5],["Redux", 5],["Node", 4],["MongoDB", 7]]
+//     ```
+
+const webTechs1 = ['HTML', 'CSS', 'JavaScript', 'React', 'Redux', 'Node', 'MongoDB'];
+
+const webTechs2 = webTechs1.map((tech) => [tech,tech.length]);
+const result = webTechs.map(tech => [tech, tech.length]);
+console.log(webTechs2);
+
+// 8. An application created using MongoDB, Express, React and Node is called a MERN stack app. Create the acronym MERN by using the array mernStack
+
+const mernStack = ['MongoDB', 'Express', 'React', 'Node'];
+const acronym = mernStack.map(tech => tech[0]).join('');
+console.log(acronym); 
