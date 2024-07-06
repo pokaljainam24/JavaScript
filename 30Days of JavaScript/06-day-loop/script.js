@@ -435,3 +435,126 @@ console.log(webTechs2);
 const mernStack = ['MongoDB', 'Express', 'React', 'Node'];
 const acronym = mernStack.map(tech => tech[0]).join('');
 console.log(acronym); 
+
+// 9. Iterate through the array, ["HTML", "CSS", "JS", "React", "Redux", "Node", "Express", "MongoDB"] using a for loop or for of loop and print out the items.
+
+let Array = ["HTML", "CSS", "JS", "React", "Redux", "Node", "Express", "MongoDB"];
+for (let i = 0; i < Array.length; i++) {
+  console.log(Array[i]);
+}
+
+const Stack = ["HTML", "CSS", "JS", "React", "Redux", "Node", "Express", "MongoDB"];
+for(const items of Stack){
+  console.log(items);
+}
+
+// 10. This is a fruit array , ['banana', 'orange', 'mango', 'lemon'] reverse the order using loop without using a reverse method.
+
+const fruits = ['banana', 'orange', 'mango', 'lemon'];
+let reversed = [];
+for (let i = fruits.length - 1; i >= 0; i--) {
+  reversed.push(fruits[i]);
+}
+console.log(reversed);
+
+// 11. Print all the elements of array as shown below.
+
+//     ```js
+//       const fullStack = [
+//         ['HTML', 'CSS', 'JS', 'React'],
+//         ['Node', 'Express', 'MongoDB']
+//       ]
+//     ````
+
+//     ```sh
+//       HTML
+//       CSS
+//       JS
+//       REACT
+//       NODE
+//       EXPRESS
+//       MONGODB
+//     ```
+
+const fullStack = [
+  ['Html', 'css', 'JS', 'React'],
+  ['Node', 'Express', 'Mongodb']
+];
+
+for (let i = 0; i < fullStack.length; i++) {
+  for (let j = 0; j < fullStack[i].length; j++) {
+    console.log(fullStack[i][j]);
+  }
+}
+
+
+
+// ### Exercises: Level 3
+
+// 1. Copy countries array(Avoid mutation)
+
+const countries5 = ['Finland', 'Sweden', 'Denmark', 'Norway', 'Iceland', 'Germany', 'France', 'Spain', 'Italy', 'Portugal'];
+const sortedCountries = [...countries5].sort(); // Create a copy of the array and sort it
+console.log(sortedCountries);
+
+// 1. Arrays are mutable. Create a copy of array which does not modify the original. Sort the copied array and store in a variable sortedCountries
+
+
+
+// 1. Sort the webTechs array and mernStack array
+
+const webTechs3 = ['HTML/CSS', 'JavaScript', 'React', 'Redux', 'Node', 'MongoDB'];
+const mernStack3 = ['MongoDB', 'Express', 'React', 'Node'];
+
+webTechs3.sort();
+mernStack3.sort();
+
+console.log(webTechs3);
+console.log(mernStack3);
+
+// 1. Extract all the countries contain the word 'land' from the [countries array]
+
+const countries6 = ['Finland', 'Sweden', 'Denmark', 'Norway', 'Iceland', 'Germany', 'France', 'Spain', 'Italy', 'Portugal'];
+const countriesWithLand1 = countries6.filter(country => country.includes('land'));
+console.log(countriesWithLand1);
+
+// 1. Find the country containing the hightest number of characters in the [countries array]
+
+let conName = ['Finland', 'Sweden', 'Denmark', 'Norway', 'Iceland', 'Germany', 'France', 'Spain', 'Italy', 'Portugal'];
+let max1 = 0;
+for (let i = 0; i < conName.length; i++) {
+  if (conName[i].length > max1) {
+    max1 = conName[i].length;
+  }
+}
+console.log(max1);
+
+// using reduce method
+
+const countries7 = ['Finland', 'Sweden', 'Denmark', 'Norway', 'Iceland', 'Germany', 'France', 'Spain', 'Italy', 'Portugal'];
+const max2 = countries7.reduce((max, country) => country.length > max.length ? country : max, '');
+console.log(max2); 
+
+// Tyoe-2
+
+const countries8 = ['Finland', 'Sweden', 'Denmark', 'Norway', 'Iceland', 'Germany', 'France', 'Spain', 'Italy', 'Portugal'];
+const max3 = countries8.reduce((max, country) => {
+  if (country.length > max.length) {
+    return country;
+  } else {
+    return max;
+  }
+}, '');
+console.log(max3);
+
+// 1. Extract all the countries containing two or more words from the [countries array]
+
+const countries9 = ['Finland', 'Sweden', 'Denmark', 'Norway', 'Iceland', 'Germany', 'France', 'Spain', 'Italy', 'Portugal', 'New Zealand', 'United States', 'United Kingdom'];
+const countriesWithMultipleWords = countries9.filter(country => country.includes(' '));
+console.log(countriesWithMultipleWords);
+
+// 1. Reverse the [countries array]
+
+const countries10 = ['Finland', 'Sweden', 'Denmark', 'Norway', 'Iceland', 'Germany', 'France', 'Spain', 'Italy', 'Portugal', 'New Zealand', 'United States', 'United Kingdom'];
+const countriesReversed = countries10.reverse();
+console.log(countriesReversed);
