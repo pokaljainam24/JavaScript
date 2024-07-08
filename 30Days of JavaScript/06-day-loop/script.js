@@ -535,7 +535,7 @@ const countries7 = ['Finland', 'Sweden', 'Denmark', 'Norway', 'Iceland', 'German
 const max2 = countries7.reduce((max, country) => country.length > max.length ? country : max, '');
 console.log(max2); 
 
-// Tyoe-2
+// Type-2
 
 const countries8 = ['Finland', 'Sweden', 'Denmark', 'Norway', 'Iceland', 'Germany', 'France', 'Spain', 'Italy', 'Portugal'];
 const max3 = countries8.reduce((max, country) => {
@@ -558,3 +558,7 @@ console.log(countriesWithMultipleWords);
 const countries10 = ['Finland', 'Sweden', 'Denmark', 'Norway', 'Iceland', 'Germany', 'France', 'Spain', 'Italy', 'Portugal', 'New Zealand', 'United States', 'United Kingdom'];
 const countriesReversed = countries10.reverse();
 console.log(countriesReversed);
+
+const name = "jainam pokal";
+const name1 = name.split(", ").join("");
+console.log(name1);

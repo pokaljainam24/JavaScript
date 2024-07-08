@@ -213,30 +213,30 @@ console.log(`The factorial of ${num} is ${factorial}`);
 
 //******************************************//Switch Case//*******************************************************//
 
-// const day = 'Friday';
+const day = 'Friday';
 
-// switch (day) {
-//   case 'Monday':
-//     console.log('Today is Monday');
-//     break;
-//   case 'Tusday':
-//     console.log('Today is Tusday');
-//     break;
-//   case 'Wednesday':
-//     console.log('Today is Wednesday');
-//     break;
-//   case 'Thursday':
-//     console.log('Today is Thursday');
-//     break;
-//   case 'Friday':
-//     console.log('Today is Friday');
-//     break;
-//   case 'Saturday':
-//   case 'Sunday':
-//     console.log('Today is Weekend');
-//     break;
-//   default:
-//     console.log('Invalid day');
-// }
+switch (day) {
+  case 'Monday':
+    console.log('Today is Monday');
+    break;
+  case 'Tusday':
+    console.log('Today is Tusday');
+    break;
+  case 'Wednesday':
+    console.log('Today is Wednesday');
+    break;
+  case 'Thursday':
+    console.log('Today is Thursday');
+    break;
+  case 'Friday':
+    console.log('Today is Friday');
+    break;
+  case 'Saturday':
+  case 'Sunday':
+    console.log('Today is Weekend');
+    break;
+  default:
+    console.log('Invalid day');
+}
 
 
