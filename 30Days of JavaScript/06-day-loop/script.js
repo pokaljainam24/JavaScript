@@ -547,6 +547,7 @@ const max3 = countries8.reduce((max, country) => {
 }, '');
 console.log(max3);
 
+
 // 1. Extract all the countries containing two or more words from the [countries array]
 
 const countries9 = ['Finland', 'Sweden', 'Denmark', 'Norway', 'Iceland', 'Germany', 'France', 'Spain', 'Italy', 'Portugal', 'New Zealand', 'United States', 'United Kingdom'];
