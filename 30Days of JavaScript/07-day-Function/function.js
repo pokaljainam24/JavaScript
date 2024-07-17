@@ -12,7 +12,7 @@
 // 4. Arrow function
 
 
-// ### Function Declaration ### //
+// ### Function Declaration ### // 
 
 function square(){
     console.log(5*5);
