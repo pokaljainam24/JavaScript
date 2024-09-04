@@ -77,6 +77,3 @@ function Arrayvalues(arr){
 const number = [1, 2, 3, 4, 4, 5, 6, 7];
 console.log(Arrayvalues(number));
 console.log(Arrayvalues([1,2,3,4,5,6,7]));
-
-
-
