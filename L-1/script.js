@@ -27,6 +27,9 @@ console.log(undefined == undefined)
 console.log(undefined === undefined)
 console.log(undefined == null)
 console.log(undefined === null)
+
+console.log(0 === null)
+console.log(0 === undefined)
 // console.log(undefined == null) // false
 // console.log(undefined === null) // false
 // console.log(null == undefined) // true
