@@ -20,24 +20,24 @@ j = j + k;
 k = j - k;
 j = j - k;
 
-console.log(j,k); // j: 8, k: 5
+console.log(j, k); // j: 8, k: 5
 
 
 
 // Que-2 Javascript program find to square.
 
 let x = 24;
-   
-console.log(x*x); // x: 576
+
+console.log(x * x); // x: 576
 
 
 
 // Que-3 Find the therd angle of a right triangle if to others angle are given.
 
-let total,c,bside=30,aside=90;
-c=aside+bside;
+let total, c, bside = 30, aside = 90;
+c = aside + bside;
 
-total = 180-c;
+total = 180 - c;
 
 console.log(total); tatal: 60
 
@@ -50,28 +50,25 @@ console.log(total); tatal: 60
 // print "Grade F".
 
 function getGrade(score) {
-    if (score >= 90) {
-        return "Grade A";
-    } else if (score >= 80) {
-        return "Grade B";
-    } else if (score >= 70) {
-        return "Grade C";
-    } else if (score >= 60) {
-        return "Grade D";
-    } else {
-        return "Grade F";
-    }
+  if (score >= 90) {
+    return "Grade A";
+  } else if (score >= 80) {
+    return "Grade B";
+  } else if (score >= 70) {
+    return "Grade C";
+  } else if (score >= 60) {
+    return "Grade D";
+  } else {
+    return "Grade F";
+  }
 }
 
 let score = 60;
 console.log(getGrade(score));  // Output: Grade B
 
-
-
-
 //Q-4 Bill
 
-let units = prompt("Enter the number of electricity units: ") ;
+let units = prompt("Enter the number of electricity units: ");
 
 let totalBill = 0.0;
 
@@ -88,3 +85,14 @@ if (units <= 50) {
 totalBill *= 1.20;
 
 alert("The total electricity bill is: Rs. " + totalBill.toFixed(2));
+
+
+// Q-5 Intrest
+
+let pen = 1000;
+let rate = 10;
+let time = 2;
+let interest = 0.0;
+
+interest = (pen * rate * time) / 100;
+console.log(interest);
