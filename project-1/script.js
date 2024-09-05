@@ -95,4 +95,4 @@ let time = 2;
 let interest = 0.0;
 
 interest = (pen * rate * time) / 100;
-console.log(interest);
+console.log(interest);       
