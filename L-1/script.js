@@ -15,21 +15,22 @@ var c=-5; // number with negative value
 // alert(y/z);  // returns -Infinity
 
 
-console.log(x);
+// console.log(x);
 
 // alert('I am In');
 
-console.log(null == null)
-console.log(null === null)
-console.log(null == undefined)
-console.log(null === undefined)
-console.log(undefined == undefined)
-console.log(undefined === undefined)
-console.log(undefined == null)
-console.log(undefined === null)
+// console.log(null == null)
+// console.log(null === null)
+// console.log(null == undefined)
+// console.log(null === undefined)
+// console.log(undefined == undefined)
+// console.log(undefined === undefined)
+// console.log(undefined == null)
+// console.log(undefined === null)
 
-console.log(0 === null)
-console.log(0 === undefined)
+// console.log(0 === null)
+// console.log(0 === undefined)
+
 // console.log(undefined == null) // false
 // console.log(undefined === null) // false
 // console.log(null == undefined) // true
@@ -39,4 +40,4 @@ console.log(0 === undefined)
 // console.log(undefined == null) // false
 // console.log(undefined === null) // false
 
-// alert('I am In');  // alert is a function in browser, not in node.js
+console.log((0.1 + 0.2) === 0.3)

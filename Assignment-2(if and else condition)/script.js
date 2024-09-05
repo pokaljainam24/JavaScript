@@ -64,22 +64,22 @@
 // 60 and 69 (inclusive), print "Grade D". For scores below 60, 
 // print "Grade F".
 
-// function getGrade(score) {
-//     if (score >= 90) {
-//         return "Grade A";
-//     } else if (score >= 80) {
-//         return "Grade B";
-//     } else if (score >= 70) {
-//         return "Grade C";
-//     } else if (score >= 60) {
-//         return "Grade D";
-//     } else {
-//         return "Grade F";
-//     }
-// }
+function getGrade(score) {
+    if (score >= 90) {
+        return "Grade A";
+    } else if (score >= 80) {
+        return "Grade B";
+    } else if (score >= 70) {
+        return "Grade C";
+    } else if (score >= 60) {
+        return "Grade D";
+    } else {
+        return "Grade F";
+    }
+}
 
-// let score = 60;
-// console.log(getGrade(score));  // Output: Grade B
+let score = 60;
+console.log(getGrade(score));  // Output: Grade B
 
 
 // Que-4  Ticket Pricing Develop a program that prompts 
