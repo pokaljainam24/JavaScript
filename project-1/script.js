@@ -12,7 +12,7 @@ let temp = a;
 a = b;
 b = temp;
 
-console.log(`a: ${a}, b: ${b}`); // a: 10, b: 5
+console.log(a, b); // a: 10, b: 5
 
 let j = 5;
 let k = 8;
@@ -97,7 +97,6 @@ let interest = 0.0;
 interest = (pen * rate * time) / 100;
 console.log(interest);
 
-
 //Q-6 Employ salary
 
 let E_Salary = 50000;
@@ -108,6 +107,7 @@ let pf = 8;
 let DA = (E_Salary * da) / 100;
 let TA = (E_Salary * ta) / 100;
 let PF = (E_Salary * pf) / 100;
+
 let Gross_Salary = E_Salary + DA + TA + PF;
 let netsalary = Gross_Salary - PF;
 console.log(Gross_Salary);
