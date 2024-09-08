@@ -54,7 +54,7 @@ if (operators === "+") {
     results = num3 / num4;
 } else if (operators === "%") {
     results = num3 % num4;
-} else {
+} else { 
     alert("Invalid operator");
 }
 
