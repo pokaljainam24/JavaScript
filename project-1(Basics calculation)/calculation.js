@@ -59,4 +59,3 @@ if (operators === "+") {
 }
 
 alert(results.toFixed(2));
-
