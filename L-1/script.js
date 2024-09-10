@@ -47,3 +47,8 @@ let b = 4 < 5;
 let c = a >= b;
 console.log(c); // true
 
+
+let j = "10";
+let k = j.toString();
+console.log(k);
+console.log(typeof(j));
