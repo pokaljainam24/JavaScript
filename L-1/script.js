@@ -51,4 +51,17 @@ console.log(c); // true
 let j = "10";
 let k = j.toString();
 console.log(k);
-console.log(typeof(j));
+console.log(typeof (j));
+
+document.getElementById("myElement").innerHTML = "my new content";
+document.getElementById("myElement").style.color = "red";
+document.getElementById("btn").style.width = "100px";
+document.getElementById("btn").style.height = "20px";
+document.getElementById("btn").style.background = "blue";
+
+document.getElementById("btn").addEventListener("click", function () {
+    alert("btn click");
+    document.getElementById("btn").style.width = "100px";
+    document.getElementById("btn").style.height = "20px";
+    document.getElementById("btn").style.background = "red";
+});
