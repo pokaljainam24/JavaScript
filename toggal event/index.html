@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Background Color</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="main" class="bgcolor">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto totam molestias dolore perspiciatis
+        blanditiis praesentium rerum quis, harum, id ipsum temporibus architecto dolorum dolorem laboriosam voluptate
+        dignissimos reiciendis a eos?</div>
+    <button id="myButton">Click me</button>
+
+    <script>
+        const main = document.getElementById("main");
+        const button = document.getElementById("myButton");
+
+        button.addEventListener("click", function(){
+            // main.classList.add('bgcolor');
+            main.classList.remove('bgcolor');
+            main.classList.toggle('color');
+        });
+    </script>
+</body>
+
+</html>

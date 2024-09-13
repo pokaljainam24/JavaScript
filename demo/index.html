@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Background Color</title>
+    <style>
+        .color {
+            background-color: red;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div id="main">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione, dolor. Nulla libero, deserunt ad
+        iusto aliquam quae vero dicta nihil est cum enim aspernatur asperiores, optio ipsum obcaecati sed fugiat!</div>
+    <button id="myButton">Click me</button>
+
+    <script>
+        const main = document.getElementById("main");
+        const button = document.getElementById("myButton");
+
+        button.addEventListener("click", function () {
+            main.classList.toggle("color");
+        });
+    </script>
+</body>
+
+</html>

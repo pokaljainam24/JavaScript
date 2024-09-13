@@ -64,4 +64,5 @@ document.getElementById("btn").addEventListener("click", function () {
     document.getElementById("btn").style.width = "100px";
     document.getElementById("btn").style.height = "20px";
     document.getElementById("btn").style.background = "red";
+    btn.classlist.add('color');
 });

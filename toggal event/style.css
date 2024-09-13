@@ -1,0 +1,13 @@
+#main{
+    height: 300px;
+    color: rgb(38, 255, 0);
+    /* background-color: aliceblue; */
+}
+
+.bgcolor {
+    background-color: red;
+}
+
+.color{
+    color: rgb(0, 0, 0);
+}
