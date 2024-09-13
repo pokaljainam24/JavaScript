@@ -154,9 +154,6 @@
 //   }
 // } while (num !== -1);
 
-
-
-
 /* Factorial Number */
 let num = 6; // 6! = 6 × 5 × 4 × 3 × 2 × 1 = 720 // change this to calculate the factorial of a different number
 let factorial = 1;
@@ -213,7 +210,7 @@ console.log(`The factorial of ${num} is ${factorial}`);
 
 //******************************************//Switch Case//*******************************************************//
 
-const day = 'Friday';
+const day = prompt("Enter The Day: ");
 
 switch (day) {
   case 'Monday':
