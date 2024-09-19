@@ -80,8 +80,10 @@
         <label for="columns" style="text-align: start; width:300px;">Columns:</label>
         <input type="number" id="columns" min="1" required>
 
-        <button onclick="generateTable()" id="btn"><span style="font-size: 1rem; font-weight: bold;">Generate
-                Table</span></button>
+        <div id="buttons" style="display: flex; width: 100%; justify-content: center; gap: 6px;">
+            <button onclick="generateTable()" id="btn" type="submit"><span style="font-size: 1rem; font-weight: bold;">GenerateTable</span></button>
+            <button id="btn" type="reset"><span style="font-size: 1rem; font-weight: bold;">Reset</span></button>
+        </div>
     </div>
 
     <div id="table-container"></div>
