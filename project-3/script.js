@@ -1,4 +1,4 @@
-document.getElementById('btn').addEventListener('click', generateTable);
+// document.getElementById('btn').addEventListener('click', generateTable);
 
 function generateTable() {
     const rows = parseInt(document.getElementById('rows').value);
