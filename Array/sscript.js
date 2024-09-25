@@ -59,18 +59,19 @@ console.log(arr6);
 
 // prime number
 
-// let prime = parseInt(prompt("Enter Prime Number"));
-// for (let i = 0; i <= prime; i++) {
-//     let count = 0;
-//     for (let j = 1; j <= i; j++) {
-//         if (i % j == 0) {
-//             count++;
-//         }
-//     }
-//     if (count === 2) {
-//         console.log("Prime Number: " + i);
-//     }
-// }
+
+let prime = parseInt(prompt("Enter Prime Number"));
+for (let i = 0; i <= prime; i++) {
+    let count = 0;
+    for (let j = 1; j <= i; j++) {
+        if (i % j == 0) {
+            count++;
+        }
+    }
+    if (count === 2) {
+        console.log("Prime Number: " + i);
+    }
+}
 
 const ComName = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"];
 const slicecompanies2 = ComName.slice(-4, -1);

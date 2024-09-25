@@ -79,15 +79,16 @@
 // console.log(Arrayvalues([1,2,3,4,5,6,7]));
 
 function test () {
-    let a = 5;
-
-    function inner (){
-        return a;
-    }
-    return inner();
+    let a = b = 5;
+    
+    function myInner(){
+        console.log(a , b);
+    } 
+    return myInner; 
 } 
-console.log(test());
 
-// test();
+const papa = test();
+papa();
 // console.log(test());
+
 
