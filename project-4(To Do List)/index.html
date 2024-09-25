@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="formcontainer">
+        <h2 style="text-align: center;">To-Do List</h2>
+
+        <div style="display: flex; justify-content: space-between; gap: 5px; margin-top: 20px;">
+
+            <input type="text" id="task-input" placeholder="Enter your task">
+
+            <select id="priority-input">
+                <option value="Low">Low</option>
+                <option value="Medium" selected>Medium</option>
+                <option value="High">High</option>
+            </select>
+
+            <input type="date" id="date-input">
+
+            <button id="add-task-btn">Add Task</button>
+        </div>
+
+        <h2 style="text-align: center; font-size: 1.5rem; margin-top: 20px;">Your Tasks</h2>
+
+        <div id="tasks-container"></div>
+
+
+        <div id="task-list">
+            <h3 style="text-align: center; font-size: 1.5rem; font-weight: 900; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Summary</h3>
+            <p>Tasks Due Today: <span id="tasks-due-today">0</span></p>
+            <p>Overdue Tasks: <span id="overdue-tasks">0</span></p>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
