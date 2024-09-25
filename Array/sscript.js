@@ -59,7 +59,6 @@ console.log(arr6);
 
 // prime number
 
-
 let prime = parseInt(prompt("Enter Prime Number"));
 for (let i = 0; i <= prime; i++) {
     let count = 0;
