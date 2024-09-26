@@ -9,12 +9,12 @@
 // // Arrays can be used to store a collection of data, and they provide a way to access and
 // // manipulate the data using an index or key.
 
-// let a = ['a,b,c,d,e'];
-// let b = [1, 2, 3, 4, 5];
-// let c = [true, false, true, false];
-// console.log(typeof a, b, c);
+let a = ['a,b,c,d,e'];
+let b = ['1, 2, 3, 4, 5'];
+let c = [true, false, true, false];
+console.log(typeof a,b,c);
 
-// // Output: a=object b=number c=boolean
+// Output: a=object b=number c=boolean
 
 // const frind = 'Jainam';
 // const frind1 = 'Vraj';
@@ -81,10 +81,9 @@
 // console.log(numbers.splice(3, 3, 7, 8, 9)); // 7,8,9
 
 // //* Split
-// // const str = "jainampokal";
-// // const l = str.split("");
-// // console.log(l);
-
+const str = "jainampokal";
+const l = str.split("");
+console.log(l);
 
 
 // // #### Concatenating array using concat

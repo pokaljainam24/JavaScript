@@ -18,7 +18,7 @@ document.getElementById('add-task-btn').addEventListener('click', function() {
         return;
     }
 
-    const today = new Date().toISOString().split('T')[0]; // Get today's date in YYYY-MM-DD format
+    const today = new Date().toISOString(); // Get today's date in YYYY-MM-DD format
 
     const taskItem = document.createElement('div');
     taskItem.className = 'task-item';
@@ -56,4 +56,5 @@ document.getElementById('add-task-btn').addEventListener('click', function() {
     taskInput.value = '';
     dateInput.value = '';
     priorityInput.value = 'Medium'; // Reset priority to default
+    
 });
