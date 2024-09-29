@@ -1,11 +1,9 @@
 document.getElementById('add-task-btn').addEventListener('click', function() {
     const taskInput = document.getElementById('task-input');
-    const dateInput = document.getElementById('date-input');
     const priorityInput = document.getElementById('priority-input');
-    const tasksContainer = document.getElementById('tasks-container');
+    const tasksTableBody = document.getElementById('tasks-table').querySelector('tbody');
 
     const taskValue = taskInput.value.trim();
-    const dateValue = dateInput.value;
     const priorityValue = priorityInput.value;
 
     if (!taskValue) {
@@ -13,48 +11,23 @@ document.getElementById('add-task-btn').addEventListener('click', function() {
         return;
     }
 
-    if (!dateValue) {
-        alert('Please select a date.');
-        return;
-    }
-
-    const today = new Date().toISOString(); // Get today's date in YYYY-MM-DD format
-
-    const taskItem = document.createElement('div');
-    taskItem.className = 'task-item';
-    taskItem.innerHTML = `
-        ${taskValue} - Due: ${dateValue} - <span class="priority">${priorityValue}</span>
-        <button class="complete-btn">Complete</button>
+    // User enter task details show in output screen logics
+    const taskRow = document.createElement('tr');
+    taskRow.className = 'task-item';
+    taskRow.innerHTML = `
+        <td>${taskValue}</td>
+        <td class="priority">${priorityValue}</td>
+        <td><button class="complete-btn">Complete</button></td>
     `;
 
-    // Toggle span visibility on task click
-    taskItem.addEventListener('click', function(event) {
-        const spanTag = this.querySelector('span');
-        if (event.target.className !== 'complete-btn') {
-            spanTag.style.display === 'none' ? 'inline' : 'none';
-        }
+    // Remove task on button click
+    taskRow.querySelector('.complete-btn').addEventListener('click', function() {
+        tasksTableBody.removeChild(taskRow);
     });
 
-    // Remove task on "Complete" button click
-    taskItem.querySelector('.complete-btn').addEventListener('click', function() {
-        tasksContainer.removeChild(taskItem);
-    });
-
-    tasksContainer.appendChild(taskItem);
-
-    // Update task counters
-    const tasksDueToday = document.getElementById('tasks-due-today');
-    const overdueTasks = document.getElementById('overdue-tasks');
-
-    if (dateValue === today) {
-        tasksDueToday.textContent = parseInt(tasksDueToday.textContent) + 1;
-    } else if (dateValue < today) {
-        overdueTasks.textContent = parseInt(overdueTasks.textContent) + 1;
-    }
+    tasksTableBody.appendChild(taskRow);
 
     // Clear input fields
     taskInput.value = '';
-    dateInput.value = '';
-    priorityInput.value = 'Medium'; // Reset priority to default
-    
+    priorityInput.value = ''; // Reset priority to default
 });

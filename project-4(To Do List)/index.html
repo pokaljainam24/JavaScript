@@ -22,18 +22,30 @@
                 <option value="High">High</option>
             </select>
 
-            <input type="date" id="date-input">
-
             <button id="add-task-btn">Add Task</button>
         </div>
 
         <h2 style="text-align: center; font-size: 1.5rem; margin-top: 20px;">Your Tasks</h2>
 
-        <div id="tasks-container"></div>
-
+        <div id="tasks-container">
+            <table id="tasks-table">
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Priority</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Task rows will be added here dynamically -->
+                </tbody>
+            </table>
+        </div>
 
         <div id="task-list">
-            <h3 style="text-align: center; font-size: 1.5rem; font-weight: 900; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Summary</h3>
+            <h3
+                style="text-align: center; font-size: 1.5rem; font-weight: 900; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                Summary</h3>
             <p>Tasks Due Today: <span id="tasks-due-today">0</span></p>
             <p>Overdue Tasks: <span id="overdue-tasks">0</span></p>
         </div>

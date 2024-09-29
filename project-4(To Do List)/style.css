@@ -1,6 +1,7 @@
 body {
     background: rgb(0, 0, 0);
     background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    display: flex;
 }
 
 #formcontainer {
@@ -8,23 +9,10 @@ body {
     width: 700px;
     padding: 50px;
     margin: auto;
+    background-color: rgba(3, 3, 3, 0.611);
     box-shadow: rgba(0, 0, 0, 0.929) 0px 3px 8px;
     color: white;
-}
-
-#formcontainer::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url(./bg-image/view-chicago-skyline-lake-by-night-usa.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: blur(2px);
-    z-index: -1;
+    border-radius: 10px;
 }
 
 h2 {
@@ -36,32 +24,31 @@ h2 {
     font-size: 2rem;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: 900;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
 }
 
-#task-list {
-    margin-top: 20px;
+table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-.task-item {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-.task-item span {
-    display: none;
-    margin-left: 10px;
-    color: blue;
+th,
+td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
 }
 
 .complete-btn {
-    margin-left: 10px;
+    color: white;
+    background-color: green;
+    border: none;
+    padding: 5px 10px;
     cursor: pointer;
-    border-radius: 5px;
-    cursor: pointer;
+}
+
+.complete-btn{
+    border-radius: 5px; 
 }
 
 .complete-btn:hover {
@@ -78,16 +65,11 @@ h2 {
     height: 40px;
     border-radius: 5px;
     cursor: pointer;
+    /* background-color: rgb(59, 56, 56);    */
 }
 
 #priority-input {
-    width: 100px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#date-input {
-    width: 150px;
+    width: 200px;
     border-radius: 5px;
     cursor: pointer;
 }

@@ -370,5 +370,3 @@ console.log("Difference (max - average):", diffMaxAverage);
 // }
 
 // division(12, 2);
-
- 
