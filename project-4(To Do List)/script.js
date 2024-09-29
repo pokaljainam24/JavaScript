@@ -29,5 +29,5 @@ document.getElementById('add-task-btn').addEventListener('click', function() {
 
     // Clear input fields
     taskInput.value = '';
-    priorityInput.value = ''; // Reset priority to default
+    priorityInput.value = 'Medium'; // Reset priority to default
 });
