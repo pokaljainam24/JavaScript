@@ -3,6 +3,9 @@ document.getElementById('add-task-btn').addEventListener('click', function () {
     const priorityInput = document.getElementById('priority-input');
     const tasksTableBody = document.getElementById('tasks-table').querySelector('tbody');
 
+    const completedCounter = document.getElementById("completed-counter");
+    const uncompletedCounter = document.getElementById("uncompleted-counter");
+    
     const taskValue = taskInput.value.trim();
     const priorityValue = priorityInput.value;
 
@@ -29,6 +32,6 @@ document.getElementById('add-task-btn').addEventListener('click', function () {
 
     // Clear input fields
     taskInput.value = '';
-    priorityInput.value = ''; // Reset priority to default
+    priorityInput.value = 'Medium'; // Reset priority to default
 });
 
