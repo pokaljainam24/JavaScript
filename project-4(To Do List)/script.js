@@ -1,4 +1,4 @@
-document.getElementById('add-task-btn').addEventListener('click', function() {
+document.getElementById('add-task-btn').addEventListener('click', function () {
     const taskInput = document.getElementById('task-input');
     const priorityInput = document.getElementById('priority-input');
     const tasksTableBody = document.getElementById('tasks-table').querySelector('tbody');
@@ -11,7 +11,7 @@ document.getElementById('add-task-btn').addEventListener('click', function() {
         return;
     }
 
-    // User enter task details show in output screen logics
+    // User enter task details show in output screen 
     const taskRow = document.createElement('tr');
     taskRow.className = 'task-item';
     taskRow.innerHTML = `
@@ -21,7 +21,7 @@ document.getElementById('add-task-btn').addEventListener('click', function() {
     `;
 
     // Remove task on button click
-    taskRow.querySelector('.complete-btn').addEventListener('click', function() {
+    taskRow.querySelector('.complete-btn').addEventListener('click', function () {
         tasksTableBody.removeChild(taskRow);
     });
 
@@ -31,3 +31,4 @@ document.getElementById('add-task-btn').addEventListener('click', function() {
     taskInput.value = '';
     priorityInput.value = 'Medium'; // Reset priority to default
 });
+
