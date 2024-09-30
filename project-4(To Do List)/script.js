@@ -17,7 +17,7 @@ document.getElementById('add-task-btn').addEventListener('click', function () {
     taskRow.innerHTML = `
         <td>${taskValue}</td>
         <td class="priority">${priorityValue}</td>
-        <td><button class="complete-btn">Complete</button></td>
+        <td><button class="complete-btn">Complete..✅</button></td>
     `;
 
     // Remove task on button click
@@ -29,6 +29,6 @@ document.getElementById('add-task-btn').addEventListener('click', function () {
 
     // Clear input fields
     taskInput.value = '';
-    priorityInput.value = 'Medium'; // Reset priority to default
+    priorityInput.value = ''; // Reset priority to default
 });
 
