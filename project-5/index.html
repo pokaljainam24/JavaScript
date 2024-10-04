@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="formcontainer">
+        <h2 style="text-align: center; font-size: 2.9rem;">To-Do List</h2>
+
+        <div style="display: flex; justify-content: space-between; gap: 5px; margin-top: 30px;">
+
+            <input type="text" id="task-input" placeholder="Enter your task...📝">
+
+            <select id="priority-input">
+                <option value="Low">Low</option>
+                <option value="Medium" selected>Medium</option>
+                <option value="High">High</option>
+            </select>
+
+            <button id="add-task-btn">Add Task..!</button>
+        </div>
+
+        <h2 style="text-align: center; font-size: 1.5rem; margin-top: 30px;">Tasks List..📃📃</h2>
+
+        <div id="tasks-container">
+            <hr style="border: 1px solid black;">
+            <table id="tasks-table" style="margin-top: 30px;">
+                <thead>
+                    <tr style="color: whitesmoke;">
+                        <th>Task</th>
+                        <th>Priority</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <!-- Task rows will be added here dynamically -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id="task-list">
+            <h3
+                style="text-align: center; font-size: 1.5rem; font-weight: bold;">
+                Summary</h3>
+            <p>Tasks Due Today: <span id="tasks-due-today">0</span></p>
+            <p>Overdue Tasks: <span id="overdue-tasks">0</span></p>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

@@ -10,7 +10,24 @@
             background-color: red;
         }
 
-        
+        .video-container {
+            position: relative;
+            width: 50%;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .bg-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .video-container:hover .bg-video {
+            opacity: 1;
+        }
     </style>
 </head>
 
@@ -19,13 +36,30 @@
         iusto aliquam quae vero dicta nihil est cum enim aspernatur asperiores, optio ipsum obcaecati sed fugiat!</div>
     <button id="myButton">Click me</button>
 
-    <script>
-        const main = document.getElementById("main");
-        const button = document.getElementById("myButton");
+    <div class="video-container">
+        <video muted loop class="bg-video">
+            <source src="https://img10.hotstar.com/video/upload/sources/r1/cms/animations/1on5cf_1587393232549"
+                type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
 
-        button.addEventListener("click", function () {
-            main.classList.toggle("color");
+    <script>
+        // const main = document.getElementById("main");
+        // const button = document.getElementById("myButton");
+
+        // button.addEventListener("click", function () {
+        //     main.classList.toggle("color");
+        // });
+
+        document.querySelector('.video-container').addEventListener('mouseenter', function () {
+            this.querySelector('.bg-video').play();
         });
+
+        document.querySelector('.video-container').addEventListener('mouseleave', function () {
+            this.querySelector('.bg-video').pause();
+        });
+
     </script>
 </body>
 
