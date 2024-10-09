@@ -31,6 +31,7 @@ document.getElementById('add-task-btn').addEventListener('click', function () {
 
     // button toggle functionality
     const completeButton = taskRow.querySelector('.complete-btn');
+    
     completeButton.addEventListener('click', function () {
         // Toggle "Edit" and "Delete" options
         if (completeButton.textContent.includes('Complete')) {
@@ -38,9 +39,23 @@ document.getElementById('add-task-btn').addEventListener('click', function () {
             completeButton.style.backgroundColor = 'white';
 
             const editBtn = document.createElement('button');
-            editBtn.textContent = 'Edit ✏️';
+            editBtn.textContent = 'Edite..✒️';
+            editBtn.style.backgroundColor = 'black';
+            editBtn.style.color = 'white';
+            editBtn.style.padding = '5px';
+            editBtn.style.cursor = 'pointer';
+            editBtn.style.width = 'auto';
+            editBtn.style.marginRight = '10px';
+            editBtn.style.borderRadius = '7px';
+            
             const deleteBtn = document.createElement('button');
-            deleteBtn.textContent = 'Delete 🗑️';
+            deleteBtn.textContent = 'Delete..🗑️';
+            deleteBtn.style.backgroundColor = 'black';
+            deleteBtn.style.color = 'white';
+            deleteBtn.style.padding = '5px';
+            deleteBtn.style.cursor = 'pointer';
+            deleteBtn.style.width = 'auto';
+            deleteBtn.style.borderRadius = '7px';
 
             const actionTd = document.createElement('td');
             actionTd.appendChild(editBtn);

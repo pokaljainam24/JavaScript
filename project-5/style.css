@@ -10,6 +10,7 @@ body {
     height: 100%;
     padding: 50px;
     margin: auto;
+    margin-top: 120px;
     color: rgb(11, 255, 24);
     border-radius: 15px;
     box-shadow: rgba(104, 255, 93, 0.737) 0px 5px 15px;
@@ -38,7 +39,7 @@ table {
 th,
 td {
     padding: 8px;
-    text-align: left;
+    text-align: center;
     border-bottom: 1px solid #ddd;
     cursor: pointer;
     color: whitesmoke;
@@ -91,8 +92,4 @@ td {
 
 p{
     color: whitesmoke;
-}
-
-#button{
-    gap: 2px;
 }
