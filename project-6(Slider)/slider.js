@@ -5,16 +5,14 @@ const slidesRight = document.querySelector(".right-slide");
 const upButton = document.querySelector(".up-button");
 const downButton = document.querySelector(".down-button");
 
-// Calculate the total number of slides
 const slidesLength = slidesRight.querySelectorAll("div").length;
 
-// Initialize the active slide index
 let activeSlidesIndex = 0;
 
-// Set initial position for left slides
+// position for left slides
 slidesLeft.style.top = `-${(slidesLength - 1) * 100}vh`;
 
-// Add click event listeners to up and down buttons
+// up and down buttons
 upButton.addEventListener("click", () => changeSlide("up"));
 downButton.addEventListener("click", () => changeSlide("down"));
 
