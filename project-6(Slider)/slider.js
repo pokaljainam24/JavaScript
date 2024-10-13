@@ -1,4 +1,3 @@
-// Get references to HTML elements
 const sliderContainer = document.querySelector(".slider-container");
 const slidesLeft = document.querySelector(".left-slide");
 const slidesRight = document.querySelector(".right-slide");
