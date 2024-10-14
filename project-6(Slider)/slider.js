@@ -30,7 +30,7 @@ const changeSlide = (direction) => {
         }
     }
 
-    // Update the transform property to change the slide position
+    // change the slide position
     slidesRight.style.transform = `translateY(-${activeSlidesIndex * sliderHeight
         }px)`;
     slidesLeft.style.transform = `translateY(${activeSlidesIndex * sliderHeight
