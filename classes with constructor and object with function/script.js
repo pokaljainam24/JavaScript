@@ -1,3 +1,16 @@
+// class Person {
+//     constructor(name) {
+//         this.name = name;
+//     }
+
+//     introduce() {
+//         console.log(`Hello, my name is ${this.name}`);
+//     }
+// }
+
+// const otto = new Person("Otto");
+// otto.introduce();
+
 class Person {
     constructor(name) {
         this.name = name;
@@ -8,6 +21,40 @@ class Person {
     }
 }
 
-const otto = new Person("Otto");
+class ExtendedPerson extends Person {
+    constructor(name, age) {
+        super(name);  
+        this.age = age;
+    }
 
-otto.introduce();
+    introduceWithAge() {
+        console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+    }
+}
+
+const otto = new ExtendedPerson("Otto", 30);
+otto.introduce();        
+otto.introduceWithAge();
+
+
+// class Car {
+//     constructor(brand) {
+//         this.carname = brand;
+//     }
+//     present() {
+//         return 'I have a ' + this.carname;
+//     }
+// }
+
+// class Model extends Car {
+//     constructor(brand, mod) {
+//         super(brand);
+//         this.model = mod;
+//     }
+//     show() {
+//         return this.present() + ', it is a ' + this.model;
+//     }
+// }
+
+// mycar = new Model("Ford", "Mustang");
+// document.getElementById("demo").innerHTML = mycar.show();
