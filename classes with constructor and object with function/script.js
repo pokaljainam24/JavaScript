@@ -76,11 +76,15 @@ class jainam extends Employee {
         this.eage = eage;
     }
 
-    #cat() {
+    cat() {
         console.log("I am a cat");
+    }
+
+    jainam(){
+        console.log("I am jainam");
     }
 
 }
 
 const calling = new jainam("jai", '21');
-console.log(calling);
+console.log(calling.cat());
