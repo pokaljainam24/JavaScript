@@ -13,7 +13,6 @@ function calculate() {
     const tipPercent = parseInt(tipInput.value);
     const split = parseInt(splitInput.value);
 
-    // Ensure inputs are valid
     if (!isNaN(bill) && bill > 0 && !isNaN(tipPercent) && tipPercent >= 0 && !isNaN(split) && split > 0) {
         
         const tipAmount = (bill * tipPercent) / 100;
@@ -36,6 +35,7 @@ function calculate() {
         tipEachDisplay.textContent = '$0.00';
     }
 }
+
 
 billInput.addEventListener('input', calculate);
 tipInput.addEventListener('input', calculate);
