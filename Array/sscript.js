@@ -16,6 +16,7 @@ const names6 = ["amazone", "google", "facebook", "oracle"];
 const names7 = names6.sort();
 console.log(names7);
 
+console.log(arr1.names6)
 
 // Using for loop
 // This method is bubble sort

@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #e0c3fc, #8ec5fc);
+}
+
+#h1 {
+    background-color: black;
+    color: white;
+    font-size: 2.5rem;
+    padding: 10px;
+    text-align: center;
+}
+
+.profile-pic {
+    display: block;
+    width: 200px;
+    height: 170px;
+    /* border-radius: 50%; */
+    margin: 0 auto 10px;
+}
+
+#students-container {
+    /* margin: 20px; */
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 10px;
+}
+
+.student-card {
+    width: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    border: 2px solid #0e4d92;
+    padding: 10px;
+}
+
+.header {
+    border-radius: 5px;
+    background-color: #0e4d92;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.student-card p {
+    margin: 5px 0;
+}
+
+.student-info{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.student-card strong {
+    color: #333;
+}

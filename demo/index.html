@@ -1,123 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toggle Background Color</title>
-    <style>
-        .color {
-            background-color: red;
-        }
-
-        .video-container {
-            position: relative;
-            width: 50%;
-            overflow: hidden;
-            cursor: pointer;
-        }
-
-        .bg-video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .video-container:hover .bg-video {
-            opacity: 1;
-        }
-    </style>
+    <title>Quotes Display</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-
 <body>
-    <div id="main">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione, dolor. Nulla libero, deserunt ad
-        iusto aliquam quae vero dicta nihil est cum enim aspernatur asperiores, optio ipsum obcaecati sed fugiat!</div>
-    <button id="myButton">Click me</button>
-
-    <div class="video-container">
-        <video muted loop class="bg-video">
-            <source src="https://img10.hotstar.com/video/upload/sources/r1/cms/animations/1on5cf_1587393232549"
-                type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+    <div id="quotes-container" class="container mt-5">
+        <!-- Cards will be dynamically added here -->
     </div>
 
+    <!-- Bootstrap JS Bundle (Optional for additional Bootstrap functionality) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript Code -->
     <script>
-        // const main = document.getElementById("main");
-        // const button = document.getElementById("myButton");
+        const quotesData = [
+            {
+                quote: "The greatest glory in living lies not in never falling, but in rising every time we fall.",
+                author: "Nelson Mandela",
+                imgurl: "https://cdn.pixabay.com/photo/2023/08/16/12/28/ai-generated-8194046_1280.png",
+                birthPlace: "Mvezo, South Africa"
+            },
+            {
+                quote: "Don't watch the clock; do what it does. Keep going.",
+                author: "Sam Levenson",
+                imgurl: "https://static.flashintel.ai/image/0/5/d/05da6cb06655276053e8c17f2ba4faf2.jpeg",
+                birthPlace: "New York City, New York, USA"
+            }
+            // Add more data here...
+        ];
 
-        // button.addEventListener("click", function () {
-        //     main.classList.toggle("color");
-        // });
+        const container = document.getElementById('quotes-container');
 
-        document.querySelector('.video-container').addEventListener('mouseenter', function () {
-            this.querySelector('.bg-video').play();
+        quotesData.forEach(item => {
+            const cardHTML = `
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="${item.imgurl}" class="img-fluid rounded-start" alt="${item.author}">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">${item.author}</h5>
+                                <p class="card-text"><em>"${item.quote}"</em></p>
+                                <p class="card-text"><small class="text-muted">${item.birthPlace}</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            container.innerHTML += cardHTML;
         });
-
-        document.querySelector('.video-container').addEventListener('mouseleave', function () {
-            this.querySelector('.bg-video').pause();
-        });
-
     </script>
 </body>
-
 </html>
-
-
-
-.slider {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-    /* center align */
-}
-
-.slide {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 0.5s;
-}
-
-.slide.active {
-    opacity: 1;
-    transition: opacity 0.5s;
-}
-
-
-
-/* Slide transition */
-.slide {
-    transition: transform 0.5s ease;
-}
-
-/* Fade animation */
-@keyframes fade {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-/* Scale animation */
-@keyframes scale {
-    0% {
-        transform: scale(0.5);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-/* Add animation on active */
-.slide.active {
-    animation: fade 0.5s ease, scale 0.5s ease;
-}
