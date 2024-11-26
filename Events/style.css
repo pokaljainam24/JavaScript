@@ -30,8 +30,8 @@ body {
     font-family:'Times New Roman', Times, serif;
     background-color: black;
     margin-left: 50px;
-    border: 1px solid #ffffff;
-    box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.673);
+    border: 1px solid #ffffff7f;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     margin-bottom: 160px;
     transition: background-color 0.3s, box-shadow 0.3s;
 }

@@ -1,6 +1,5 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #e0c3fc, #8ec5fc);
 }
 
 #h1 {
@@ -20,7 +19,7 @@ body {
 }
 
 #students-container {
-    /* margin: 20px; */
+    margin-bottom: 10px;
     padding: 10px;
     display: grid;
     grid-template-columns: repeat(4, auto);
@@ -29,12 +28,14 @@ body {
 
 .student-card {
     width: auto;
-    border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
     border: 2px solid #0e4d92;
-    padding: 10px;
+    padding: 20px;
+    margin: 10px 0;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .header {
@@ -54,7 +55,7 @@ body {
     margin: 5px 0;
 }
 
-.student-info{
+.student-info {
     margin-top: 20px;
     text-align: center;
 }
@@ -62,3 +63,59 @@ body {
 .student-card strong {
     color: #333;
 }
+
+.carousel-container {
+    position: relative;
+    width: auto;
+    margin-top: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(to bottom, #e0c3fc, #8ec5fc);
+}
+
+.student-card {
+    display: none;
+    width: 300px;
+}
+
+.student-card.active {
+    display: block;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#btn {
+    left: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#prev {
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    background-color: black;
+    color: #8ec5fc;
+}
+
+#next {
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    background-color: black;
+    color: #8ec5fc;
+}
+

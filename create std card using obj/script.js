@@ -192,9 +192,9 @@ let students = [
         Age: 22,
         contact: 9016883804,
         email: 'jainampokal@gmail.com',
-        address: { 
-            city: 'Navsari', 
-            state: 'Gujarat' 
+        address: {
+            city: 'Navsari',
+            state: 'Gujarat'
         }
     },
     {
@@ -203,8 +203,8 @@ let students = [
         contact: 9913720564,
         email: 'chiruu22@gmail.com',
         address: {
-            city: 'Toronto', 
-            state: 'Canada' 
+            city: 'Toronto',
+            state: 'Canada'
         }
     },
     {
@@ -212,9 +212,9 @@ let students = [
         Age: 18,
         contact: 9016883858,
         email: 'romilpokal@gmail.com',
-        address: { 
-            city: 'Navsari', 
-            state: 'Gujarat' 
+        address: {
+            city: 'Navsari',
+            state: 'Gujarat'
         }
     },
     {
@@ -222,9 +222,9 @@ let students = [
         Age: 17,
         contact: 9016883808,
         email: 'joyalpokal@gmail.com',
-        address: { 
-            city: 'Navsari', 
-            state: 'Gujarat' 
+        address: {
+            city: 'Navsari',
+            state: 'Gujarat'
         }
     },
     {
@@ -292,9 +292,9 @@ let students = [
 const container = document.querySelector('#students-container');
 container.innerHTML = "";
 
-students.forEach((student) => {
+students.forEach((student, index) => {
     let studentHTML = `
-        <div class="student-card" id="std">
+        <div class="student-card" id="std-${index}">
             <div class="header">
                 <h1>Student Info Co.</h1>
             </div>
@@ -313,4 +313,39 @@ students.forEach((student) => {
 
     container.innerHTML += studentHTML;
 });
+
+let currentIndex = 0;
+const cards = document.querySelectorAll('.student-card');
+
+function updateVisibleCards() {
+    cards.forEach((card, index) => {
+        if (index >= currentIndex && index < currentIndex + 3) {
+            card.classList.add('active');
+        } else {
+            card.classList.remove('active');
+        }
+    });
+}
+
+updateVisibleCards();
+
+function showNextSet() {
+    if (currentIndex + 3 < cards.length) {
+        currentIndex++;
+        updateVisibleCards();
+    }
+}
+
+function showPrevSet() {
+    if (currentIndex > 0) {
+        currentIndex--;
+        updateVisibleCards();
+    }
+}
+
+document.querySelector('#next').addEventListener('click', showNextSet);
+document.querySelector('#prev').addEventListener('click', showPrevSet);
+
+
+
 

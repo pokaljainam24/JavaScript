@@ -1,85 +1,75 @@
-// const sliderContainer = document.querySelector(".slider-container");
-// const slidesLeft = document.querySelector(".left-slide");
-// const slidesRight = document.querySelector(".right-slide");
-// const upButton = document.querySelector(".up-button");
-// const downButton = document.querySelector(".down-button");
+// Select elements
+const leftSlide = document.querySelector('.left-slide');
+const rightSlide = document.querySelector('.right-slide');
+const upButton = document.querySelector('.up-button');
+const downButton = document.querySelector('.down-button');
 
-// const slidesLength = slidesRight.querySelectorAll("div").length;
-
-// let activeSlidesIndex = 0;
-
-// // position for left slides
-// slidesLeft.style.top = `-${(slidesLength - 1) * 100}vh`;
-
-// // up and down buttons
-// upButton.addEventListener("click", () => changeSlide("up"));
-// downButton.addEventListener("click", () => changeSlide("down"));
-
-// // Function to change the active slide
-// const changeSlide = (direction) => {
-//     const sliderHeight = sliderContainer.clientHeight;
-//     if (direction === "up") {
-//         activeSlidesIndex++;
-//         if (activeSlidesIndex > slidesLength - 1) {
-//             activeSlidesIndex = 0;
-//         }
-//     } else if (direction === "down") {
-//         activeSlidesIndex--;
-//         if (activeSlidesIndex < 0) {
-//             activeSlidesIndex = slidesLength - 1;
-//         }
-//     }
-
-//     // change the slide position
-//     slidesRight.style.transform = `translateY(-${activeSlidesIndex * sliderHeight
-//         }px)`;
-//     slidesLeft.style.transform = `translateY(${activeSlidesIndex * sliderHeight
-//         }px)`;
-// };
-
-// Type-2 (Object)
-
-class Slider {
-    constructor(sliderContainerSelector, slidesLeftSelector, slidesRightSelector, upButtonSelector, downButtonSelector) {
-        this.sliderContainer = document.querySelector(sliderContainerSelector);
-        this.slidesLeft = document.querySelector(slidesLeftSelector);
-        this.slidesRight = document.querySelector(slidesRightSelector);
-        this.upButton = document.querySelector(upButtonSelector);
-        this.downButton = document.querySelector(downButtonSelector);
-
-        this.slides = this.slidesRight.querySelectorAll("div");
-        this.slidesLength = this.slides.length;
-        this.activeSlidesIndex = 0;
-
-        // Set initial top position for left slides
-        this.topPosition = (this.slidesLength * 100) - 100;
-        this.slidesLeft.style.top = `-${this.topPosition}vh`;
-
-        // Add event listeners for buttons
-        this.upButton.addEventListener("click", () => this.changeSlide("up"));
-        this.downButton.addEventListener("click", () => this.changeSlide("down"));
+// Slider data
+const sliderData = [
+    {
+        name: "Lamborghini",
+        description: "All in Black-Edition",
+        backgroundColor: "rgb(13, 30, 109)",
+        image: "./car-img/car-8778216_1280.jpg",
+    },
+    {
+        name: "PORSCHE GT3",
+        description: "All in White",
+        backgroundColor: "rgb(155,155,157)",
+        textColor: "#252e33",
+        image: "./car-img/porsche-4795519_1280.jpg",
+    },
+    {
+        name: "Ferrari",
+        description: "All in Red-Edition",
+        backgroundColor: "rgb(211,0,0)",
+        image: "./car-img/Ferrari_2012-18_F12_berlinetta_Pininfarina_Black_541005_1280x854.jpg",
+    },
+    {
+        name: "Mustang",
+        description: "Sports Car",
+        backgroundColor: "rgb(1,31,141)",
+        image: "./car-img/4k-ultra-hd-mustang-blue-car-8t1qwil5xrimb3pl.webp",
     }
+];
 
-    changeSlide(direction) {
-        const sliderHeight = this.sliderContainer.clientHeight;
+let leftSlideHTML = '';
+let rightSlideHTML = '';
 
-        if (direction === "up") {
-            this.activeSlidesIndex++;
-            if (this.activeSlidesIndex >= this.slidesLength) {
-                this.activeSlidesIndex = 0;
-            }
-        } else if (direction === "down") {
-            this.activeSlidesIndex--;
-            if (this.activeSlidesIndex < 0) {
-                this.activeSlidesIndex = this.slidesLength - 1;
-            }
-        }
+sliderData.forEach(item => {
+    leftSlideHTML += `
+        <div style="background-color: ${item.backgroundColor};">
+            <h1>${item.name}</h1>
+            <p style="font-size: 1.5rem; color: ${item.textColor || '#fff'};">${item.description}</p>
+        </div>
+    `;
 
-        // Change the slide position
-        this.slidesRight.style.transform = `translateY(-${this.activeSlidesIndex * sliderHeight}px)`;
-        this.slidesLeft.style.transform = `translateY(${this.activeSlidesIndex * sliderHeight}px)`;
-    }
+    rightSlideHTML += `
+        <div style="background: url('${item.image}') no-repeat center center; background-size: cover;"></div>
+    `;
+});
+
+leftSlide.innerHTML = leftSlideHTML;
+rightSlide.innerHTML = rightSlideHTML;
+
+let activeSlideIndex = 0;
+const totalSlides = sliderData.length;
+
+function updateSlides() {
+    // Set the transform property to show the correct slide
+    const leftSlideHeight = leftSlide.clientHeight;
+    const offset = -activeSlideIndex * leftSlideHeight;
+    leftSlide.style.transform = `translateY(${offset}px)`;
+    rightSlide.style.transform = `translateY(${offset}px)`;
 }
 
-// Initialize the slider
-const slider = new Slider(".slider-container", ".left-slide", ".right-slide", ".up-button", ".down-button");
+// Event listeners for button clicks
+upButton.addEventListener('click', () => {
+    activeSlideIndex = (activeSlideIndex + 1) < totalSlides ? activeSlideIndex + 1 : 0;
+    updateSlides();
+});
+
+downButton.addEventListener('click', () => {
+    activeSlideIndex = (activeSlideIndex - 1) >= 0 ? activeSlideIndex - 1 : totalSlides - 1;
+    updateSlides();
+});
