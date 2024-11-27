@@ -32,8 +32,7 @@ class ExtendedPerson extends Person {
     }
 }
 
-const otto = new ExtendedPerson("Otto", 30);
-console.log(otto)
+const otto = new ExtendedPerson("jainam", 30);
 otto.introduce();        
 otto.introduceWithAge();
 

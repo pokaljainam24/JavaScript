@@ -289,6 +289,7 @@ let students = [
     }
 ];
 
+
 const container = document.querySelector('#students-container');
 container.innerHTML = "";
 
@@ -299,7 +300,6 @@ students.forEach((student, index) => {
                 <h1>Student Info Co.</h1>
             </div>
             <img src="./images/portrait-man-cartoon-style_23-2151134017.jpg" alt="img" class="profile-pic">
-
             <div class="student-info">
                 <p><strong>Name: </strong>${student.Name}</p>
                 <p><strong>Age: </strong>${student.Age}</p>
@@ -315,37 +315,36 @@ students.forEach((student, index) => {
 });
 
 let currentIndex = 0;
-const cards = document.querySelectorAll('.student-card');
+const totalCards = students.length;
+const visibleCards = 3;
+
 
 function updateVisibleCards() {
-    cards.forEach((card, index) => {
-        if (index >= currentIndex && index < currentIndex + 3) {
-            card.classList.add('active');
-        } else {
-            card.classList.remove('active');
-        }
-    });
+    const offset = -currentIndex * (100 / visibleCards) + currentIndex;
+    container.style.transform = `translateX(${offset}%)`;
 }
 
-updateVisibleCards();
-
 function showNextSet() {
-    if (currentIndex + 3 < cards.length) {
-        currentIndex++;
-        updateVisibleCards();
+    currentIndex = (currentIndex + 1) % totalCards;
+
+    if (currentIndex + visibleCards > totalCards) {
+        currentIndex = 0;
     }
+
+    updateVisibleCards();
 }
 
 function showPrevSet() {
-    if (currentIndex > 0) {
-        currentIndex--;
-        updateVisibleCards();
+    currentIndex = (currentIndex - 1 + totalCards) % totalCards;
+
+    if (currentIndex < 0) {
+        currentIndex = Math.max(totalCards - visibleCards, 0);
     }
+
+    updateVisibleCards();
 }
+
 
 document.querySelector('#next').addEventListener('click', showNextSet);
 document.querySelector('#prev').addEventListener('click', showPrevSet);
-
-
-
 
