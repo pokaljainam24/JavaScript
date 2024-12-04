@@ -4,28 +4,40 @@ let students = [
         Age: 22,
         contact: 9016883804,
         email: 'jainampokal@gmail.com',
-        address: { city: 'Navsari', state: 'Gujarat' }
+        address: {
+            city: 'Navsari',
+            state: 'Gujarat',
+        }
     },
     {
         Name: 'Chirag Chilveri',
         Age: 24,
         contact: 9913720564,
         email: 'chiruu22@gmail.com',
-        address: { city: 'Toronto', state: 'Canada' }
+        address: {
+            city: 'Toronto',
+            state: 'Canada',
+        }
     },
     {
         Name: 'romil pokal',
         Age: 18,
         contact: 9016883858,
         email: 'romilpokal@gmail.com',
-        address: { city: 'Navsari', state: 'Gujarat' }
+        address: {
+            city: 'Navsari',
+            state: 'Gujarat',
+        }
     },
     {
         Name: 'joyal pokal',
         Age: 17,
         contact: 9016883808,
         email: 'joyalpokal@gmail.com',
-        address: { city: 'Navsari', state: 'Gujarat' }
+        address: {
+            city: 'Navsari',
+            state: 'Gujarat',
+        }
     },
     {
         Name: 'jainam pokal',
@@ -318,14 +330,13 @@ let currentIndex = 0;
 const totalCards = students.length;
 const visibleCards = 3;
 
-
 function updateVisibleCards() {
-    const offset = -currentIndex * (100 / visibleCards) + currentIndex;
+    const offset = -currentIndex * (100 / visibleCards);
     container.style.transform = `translateX(${offset}%)`;
 }
 
 function showNextSet() {
-    currentIndex = (currentIndex + 1) % totalCards;
+    currentIndex += 1;
 
     if (currentIndex + visibleCards > totalCards) {
         currentIndex = 0;
@@ -335,7 +346,7 @@ function showNextSet() {
 }
 
 function showPrevSet() {
-    currentIndex = (currentIndex - 1 + totalCards) % totalCards;
+    currentIndex -= 1;
 
     if (currentIndex < 0) {
         currentIndex = Math.max(totalCards - visibleCards, 0);
@@ -347,4 +358,3 @@ function showPrevSet() {
 
 document.querySelector('#next').addEventListener('click', showNextSet);
 document.querySelector('#prev').addEventListener('click', showPrevSet);
-

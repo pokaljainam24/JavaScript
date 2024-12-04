@@ -11,30 +11,30 @@
 // const otto = new Person("Otto");
 // otto.introduce();
 
-class Person {
-    constructor(name) {
-        this.name = name;
-    }
+// class Person {
+//     constructor(name) {
+//         this.name = name;
+//     }
 
-    introduce() {
-        console.log(`Hello, my name is ${this.name}`);
-    }
-}
+//     introduce() {
+//         console.log(`Hello, my name is ${this.name}`);
+//     }
+// }
 
-class ExtendedPerson extends Person {
-    constructor(name, age) {
-        super(name);  
-        this.age = age;
-    }
+// class ExtendedPerson extends Person {
+//     constructor(name, age) {
+//         super(name);  
+//         this.age = age;
+//     }
 
-    introduceWithAge() {
-        console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
-    }
-}
+//     introduceWithAge() {
+//         console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+//     }
+// }
 
-const otto = new ExtendedPerson("jainam", 30);
-otto.introduce();        
-otto.introduceWithAge();
+// const otto = new ExtendedPerson("jainam", 30);
+// otto.introduce();        
+// otto.introduceWithAge();
 
 
 // class Car {
@@ -138,3 +138,69 @@ otto.introduceWithAge();
 
 // console.log(outer());
 
+
+/* Inheritance */
+
+// class Person {
+//     constructor(name, age, role) {
+//         this.name = name;
+//         this.age = age;
+//         this.role = role;
+//     }
+
+//     intro() {
+//         console.log(`Hi, my name is ${this.name} and I am ${this.age} year old. I'm ${this.role} in this school`);
+//     }
+// }
+
+// class teacher extends Person {
+//     constructor(name, age, subject, role) {
+//         super(name, age, role)
+//         this.subject = subject;
+//     }
+// }
+
+// let teacher1 = new teacher('Jainam', 21, 'Principal', 'Math');
+// console.log(teacher1);
+// teacher1.intro();
+
+
+
+/* polymorephysam */
+
+class jainam {
+    constructor(name, age, role) {
+        this.name = name
+        this.age = age
+        this.role = role
+    }
+
+    intro() {
+        console.log(`Hi, my name is ${this.name} and I am ${this.age}`);
+    }
+}
+
+class jainam2 extends jainam {
+    constructor(name, age, role, subject) {
+        super(name, age, role)
+        this.subject = subject;
+    }
+
+    intro() {
+        super.intro()
+        console.log(`Hi, my name is ${this.name} and I am ${this.age} I teach ${this.subject}`);
+    }
+
+    jainam(){
+        console.log(`Hi, my name is ${this.name} and I am ${this.age}`)
+    }
+}
+
+let j1 = new jainam('Jainam', 21, 'Student');
+let j2 = new jainam2('Jainam', 21, 'Teacher', 'Math');
+
+console.log(j1);
+console.log(j2);
+
+j1.intro();
+j2.intro();
