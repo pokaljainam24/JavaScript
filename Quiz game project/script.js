@@ -88,13 +88,14 @@ function showQuestion(question) {
     questionElement.textContent = `Question ${currentQuestionIndex + 1}: ${question.question}`;
     quizContainer.appendChild(questionElement);
 
-    const optionsList = document.createElement("ul");
-
+    const optionsList = document.createElement("ul");`<hr>`
+    
 
     question.options.forEach((option, index) => {
 
         const optionItem = document.createElement("li");
         const radioButton = document.createElement("input");
+        radioButton.style.cursor = "pointer";
 
         radioButton.type = "radio";
         radioButton.name = "quiz-option";
@@ -116,6 +117,7 @@ function showQuestion(question) {
 
     const submitButton = document.createElement("button");
     submitButton.textContent = "Submit Answer";
+    submitButton.style.marginTop = "20px";
     submitButton.onclick = function () {
 
         const selectedOption = document.querySelector('input[name="quiz-option"]:checked');
@@ -157,8 +159,7 @@ function handleAnswer(selectedOption) {
     if (userAnswer === question.answer) {
         score++;
     }
-
-    // Move to next question
+    
     currentQuestionIndex++;
     startQuiz();
 }
