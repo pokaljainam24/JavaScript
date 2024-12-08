@@ -1,29 +1,65 @@
-let second = document.querySelector('.sec');
-let minut = document.querySelector('.min');
-let hours = document.querySelector('.hr');
+const days = document.getElementById('days');
+const hours = document.getElementById('hours');
+const minutes = document.getElementById('minutes');
+const seconds = document.getElementById('seconds');
 
-let sec = 0;
-let min = 0;
-let hr = 0;
+const countdown = document.getElementById('countdown');
+const birthdayTime = document.getElementById('birthdayTime');
+const refresh = document.getElementById('refresh');
+const message = document.getElementById('message');
+const yearold = document.getElementById('yearold');
+const dateyear = document.getElementById('dateyear');
 
-setInterval(() => {
-    sec++;
+const currentYear = new Date().getFullYear();
+let birthday = new Date(`Apr 24 ${currentYear} 00:00:00`);
+const today = new Date();
+const currentDateTime = new Date(`${today.getMonth() + 1} ${today.getDate()} ${currentYear}`); 
 
-    if (sec == 60) {
-        sec = 0;
-        min++;
+// If birthday this year has already passed, set it to next year
+if (currentDateTime > birthday) {
+    birthday = new Date(`Apr 24 ${currentYear + 1} 00:00:00`);
+}
 
-        if (min == 60) {
-            min = 0;
-            hr++;
-        }
+let age = currentYear - 2003;
+if (today < birthday) {
+    age--; 
+}
+
+dateyear.innerText = currentYear;
+
+const s = 1000;
+const m = s * 60;
+const h = m * 60;
+const d = h * 24;
+
+function updateCount() {
+    const now = new Date();
+    const timeLeft = birthday - now;
+
+    // Ensure timeLeft is always positive
+    const daysLeft = Math.max(0, Math.floor(timeLeft / d));
+    const hoursLeft = Math.max(0, Math.floor((timeLeft % d) / h));
+    const minutesLeft = Math.max(0, Math.floor((timeLeft % h) / m));
+    const secondsLeft = Math.max(0, Math.floor((timeLeft % m) / s));
+
+    // Update the DOM with the new countdown values
+    days.innerHTML = daysLeft;
+    hours.innerHTML = hoursLeft < 10 ? '0' + hoursLeft : hoursLeft;
+    minutes.innerHTML = minutesLeft < 10 ? '0' + minutesLeft : minutesLeft;
+    seconds.innerHTML = secondsLeft < 10 ? '0' + secondsLeft : secondsLeft;
+
+    // If it's the birthday
+    if (now.getMonth() === birthday.getMonth() && now.getDate() === birthday.getDate()) {
+        console.log('Happy Birthday Jainam Pokal...🎂🎂🎂');
+        message.innerHTML = `<br> Guys and Gals, It gives me great pleasure to notify you that today is my birthday.
+            <br> Happy Birthday..🎂🎂🎂!! Hope I had a nice Birthday Bash..❤️❤️!!`;
+        countdown.style.display = "none";
+        birthdayTime.style.display = "none";
+        yearold.innerText = `${age + 1}th Birthday.....🎂!`;
+        clearInterval(timerId);
+    } else {
+        yearold.innerText = `${age + 1}th Birthday....!`;
     }
+}
 
-    document.getElementById("hours").textContent = hr < 10 ? '0' + hr : hr;
-    document.getElementById("minutes").textContent = min < 10 ? '0' + min : min;
-    document.getElementById("seconds").textContent = sec < 10 ? '0' + sec : sec;
-
-
-}, 1000);
-
-
+const timerId = setInterval(updateCount);

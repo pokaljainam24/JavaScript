@@ -30,7 +30,7 @@ body {
 #game-rules {
     width: 80%;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #82c7ff, #9693ff);
+    background: linear-gradient(135deg, #ffa182, #dfff93);
     border-radius: 15px;
     padding: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
